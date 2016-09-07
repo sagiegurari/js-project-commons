@@ -1,6 +1,6 @@
 # js-project-commons
 
-[![NPM Version](http://img.shields.io/npm/v/js-project-commons.svg?style=flat)](https://www.npmjs.org/package/js-project-commons) [![Build Status](https://travis-ci.org/sagiegurari/js-project-commons.svg)](http://travis-ci.org/sagiegurari/js-project-commons) [![Coverage Status](https://coveralls.io/repos/sagiegurari/js-project-commons/badge.svg)](https://coveralls.io/r/sagiegurari/js-project-commons) [![Code Climate](https://codeclimate.com/github/sagiegurari/js-project-commons/badges/gpa.svg)](https://codeclimate.com/github/sagiegurari/js-project-commons) [![bitHound Code](https://www.bithound.io/github/sagiegurari/js-project-commons/badges/code.svg)](https://www.bithound.io/github/sagiegurari/js-project-commons) [![Inline docs](http://inch-ci.org/github/sagiegurari/js-project-commons.svg?branch=master)](http://inch-ci.org/github/sagiegurari/js-project-commons)<br>
+[![NPM Version](http://img.shields.io/npm/v/js-project-commons.svg?style=flat)](https://www.npmjs.org/package/js-project-commons) [![Build Status](https://travis-ci.org/sagiegurari/js-project-commons.svg)](http://travis-ci.org/sagiegurari/js-project-commons) [![Coverage Status](https://coveralls.io/repos/sagiegurari/js-project-commons/badge.svg)](https://coveralls.io/r/sagiegurari/js-project-commons) [![bitHound Code](https://www.bithound.io/github/sagiegurari/js-project-commons/badges/code.svg)](https://www.bithound.io/github/sagiegurari/js-project-commons) [![Inline docs](http://inch-ci.org/github/sagiegurari/js-project-commons.svg?branch=master)](http://inch-ci.org/github/sagiegurari/js-project-commons)<br>
 [![License](https://img.shields.io/npm/l/js-project-commons.svg?style=flat)](https://github.com/sagiegurari/js-project-commons/blob/master/LICENSE) [![Total Downloads](https://img.shields.io/npm/dt/js-project-commons.svg?style=flat)](https://www.npmjs.org/package/js-project-commons) [![Dependency Status](https://david-dm.org/sagiegurari/js-project-commons.svg)](https://david-dm.org/sagiegurari/js-project-commons) [![devDependency Status](https://david-dm.org/sagiegurari/js-project-commons/dev-status.svg)](https://david-dm.org/sagiegurari/js-project-commons?type=dev)<br>
 [![Retire Status](http://retire.insecurity.today/api/image?uri=https://raw.githubusercontent.com/sagiegurari/js-project-commons/master/package.json)](http://retire.insecurity.today/api/image?uri=https://raw.githubusercontent.com/sagiegurari/js-project-commons/master/package.json)
 
@@ -21,7 +21,7 @@ This allows for a central configuration for all projects.
 
 <a name="usage"></a>
 ## Usage
-In order to use this library, you need to refactor your build processes as defined in some of my project such as simple-oracledb.
+In order to use this library, you need to refactor your build processes as defined in some of my projects such as [simple-oracledb](https://github.com/sagiegurari/simple-oracledb)
 
 <a name="installation"></a>
 ## Installation
@@ -42,6 +42,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2016-09-07  | v1.0.0  | Change hosted lint configurations |
 | 2016-09-07  | v0.0.2  | Initial release. |
 
 <a name="license"></a>
