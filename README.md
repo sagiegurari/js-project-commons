@@ -1,2 +1,49 @@
 # js-project-commons
-Common web and node.js grunt tasks/lint configs/md templates and so on...
+
+[![NPM Version](http://img.shields.io/npm/v/js-project-commons.svg?style=flat)](https://www.npmjs.org/package/js-project-commons) [![Build Status](https://travis-ci.org/sagiegurari/js-project-commons.svg)](http://travis-ci.org/sagiegurari/js-project-commons) [![Coverage Status](https://coveralls.io/repos/sagiegurari/js-project-commons/badge.svg)](https://coveralls.io/r/sagiegurari/js-project-commons) [![Code Climate](https://codeclimate.com/github/sagiegurari/js-project-commons/badges/gpa.svg)](https://codeclimate.com/github/sagiegurari/js-project-commons) [![bitHound Code](https://www.bithound.io/github/sagiegurari/js-project-commons/badges/code.svg)](https://www.bithound.io/github/sagiegurari/js-project-commons) [![Inline docs](http://inch-ci.org/github/sagiegurari/js-project-commons.svg?branch=master)](http://inch-ci.org/github/sagiegurari/js-project-commons)<br>
+[![License](https://img.shields.io/npm/l/js-project-commons.svg?style=flat)](https://github.com/sagiegurari/js-project-commons/blob/master/LICENSE) [![Total Downloads](https://img.shields.io/npm/dt/js-project-commons.svg?style=flat)](https://www.npmjs.org/package/js-project-commons) [![Dependency Status](https://david-dm.org/sagiegurari/js-project-commons.svg)](https://david-dm.org/sagiegurari/js-project-commons) [![devDependency Status](https://david-dm.org/sagiegurari/js-project-commons/dev-status.svg)](https://david-dm.org/sagiegurari/js-project-commons?type=dev)<br>
+[![Retire Status](http://retire.insecurity.today/api/image?uri=https://raw.githubusercontent.com/sagiegurari/js-project-commons/master/package.json)](http://retire.insecurity.today/api/image?uri=https://raw.githubusercontent.com/sagiegurari/js-project-commons/master/package.json)
+
+> Common web and node.js grunt tasks/lint configs/md templates and so on...
+
+* [Overview](#overview)
+* [Usage](#usage)
+* [Installation](#installation)
+* [API Documentation](docs/api.md)
+* [Contributing](.github/CONTRIBUTING.md)
+* [Release History](#history)
+* [License](#license)
+
+<a name="overview"></a>
+## Overview
+This library holds common build tasks, lint configuration and so on, used by my personal node.js and web projects.<br>
+This allows for a central configuration for all projects.
+
+<a name="usage"></a>
+## Usage
+In order to use this library, you need to refactor your build processes as defined in some of my project such as simple-oracledb.
+
+<a name="installation"></a>
+## Installation
+In order to use this library, just run the following npm install command:
+
+```sh
+npm install --save-dev js-project-commons
+```
+
+## API Documentation
+See full docs at: [API Docs](docs/api.md)
+
+## Contributing
+See [contributing guide](.github/CONTRIBUTING.md)
+
+<a name="history"></a>
+## Release History
+
+| Date        | Version | Description |
+| ----------- | ------- | ----------- |
+| 2016-09-07  | v0.0.1  | Initial release. |
+
+<a name="license"></a>
+## License
+Developed by Sagie Gur-Ari and licensed under the Apache 2 open source license.
