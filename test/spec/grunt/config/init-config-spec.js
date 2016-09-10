@@ -210,4 +210,43 @@ describe('Grunt initConfig Tests', function () {
 
         assert.isTrue(validated);
     });
+
+    it('web, with bower.json', function () {
+        var validated = false;
+        var gruntMock = {
+            registerTask: function () {
+                return undefined;
+            },
+            file: {
+                readJSON: function () {
+                    return {};
+                }
+            },
+            initConfig: function (config) {
+                assert.isDefined(config);
+                assert.deepEqual(config.buildConfig.packageJSON, {
+                    test: true
+                });
+                assert.deepEqual(config.buildConfig.bowerJSON, {
+                    main: 'main.js'
+                });
+
+                assert.isDefined(config.clean);
+                assert.isDefined(config.karma);
+                assert.isUndefined(config.myProj);
+
+                validated = true;
+            }
+        };
+
+        initConfig(gruntMock, {
+            buildConfig: {
+                disableGruntPlugins: true,
+                projectRoot: path.join(__dirname, '../../../helper'),
+                nodeProject: false
+            }
+        });
+
+        assert.isTrue(validated);
+    });
 });
