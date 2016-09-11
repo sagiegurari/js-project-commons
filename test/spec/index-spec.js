@@ -81,6 +81,19 @@ describe('Commons Tests', function () {
                     assert.equal(counter, 6);
                 });
 
+                it('integrationTest', function () {
+                    var counter = 0;
+                    var gruntMock = {
+                        registerTask: function () {
+                            counter++;
+                        }
+                    };
+
+                    var output = commons.grunt.task.integrationTest(gruntMock);
+                    assert.isDefined(output);
+                    assert.equal(counter, 2);
+                });
+
                 it('jslint', function () {
                     var gruntMock = {
                         file: {
@@ -130,7 +143,7 @@ describe('Commons Tests', function () {
 
                     var output = commons.grunt.task.project(gruntMock);
                     assert.isDefined(output);
-                    assert.equal(counter, 2);
+                    assert.equal(counter, 1);
                 });
 
                 it('topLevel', function () {
