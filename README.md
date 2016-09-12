@@ -42,7 +42,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2016-09-12  | v1.0.11 | Maintenance |
+| 2016-09-12  | v1.0.12 | Maintenance |
 | 2016-09-12  | v1.0.10 | eslint will test also spec files |
 | 2016-09-11  | v1.0.9  | Maintenance |
 | 2016-09-10  | v1.0.3  | Grunt tasks are now grouped to node/web build configs |
