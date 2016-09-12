@@ -78,7 +78,7 @@ describe('Commons Tests', function () {
                 assert.isTrue(Object.keys(config.rules).length > 0);
                 assert.deepEqual(config.rules.strict, [
                     2,
-                    'global'
+                    'function'
                 ]);
                 assert.isTrue(config.env.browser);
                 assert.isUndefined(config.env.node);
