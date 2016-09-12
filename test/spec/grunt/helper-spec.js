@@ -1,7 +1,6 @@
 'use strict';
-/*global describe: false, it: false */
+/*global describe: false, it: false*/
 
-var path = require('path');
 var chai = require('chai');
 var assert = chai.assert;
 var helper = require('../../../lib/grunt/helper');
@@ -25,23 +24,48 @@ describe('Helper Tests', function () {
         });
     });
 
+    describe('getESlintTestConfigFile', function () {
+        it('node', function () {
+            var file = helper.getESlintTestConfigFile({
+                nodeProject: true
+            });
+
+            assert.isTrue(file.indexOf('mocha') !== -1);
+            assert.isTrue(file.indexOf('karma') === -1);
+        });
+
+        it('web', function () {
+            var file = helper.getESlintTestConfigFile({
+                nodeProject: false
+            });
+
+            assert.isTrue(file.indexOf('karma') !== -1);
+            assert.isTrue(file.indexOf('mocha') === -1);
+        });
+    });
+
     describe('getProjectSources', function () {
-        it('node, no exclude', function () {
+        it('node all', function () {
             var src = helper.getProjectSources({
                 nodeProject: true
-            }, false);
+            }, {
+                includeLib: true,
+                includeBuild: true,
+                includeTest: true
+            });
 
             assert.deepEqual(src, [
                 '*.js',
                 '<%=buildConfig.libDirectory%>/**/*.js',
-                'project/**/*.js'
+                'project/**/*.js',
+                '<%=buildConfig.testDirectory%>/**/*spec.js'
             ]);
         });
 
-        it('node, exclude', function () {
+        it('node defaults', function () {
             var src = helper.getProjectSources({
                 nodeProject: true
-            }, true);
+            });
 
             assert.deepEqual(src, [
                 '*.js',
@@ -49,48 +73,180 @@ describe('Helper Tests', function () {
             ]);
         });
 
-        it('web, no bower.json, no exclude', function () {
+        it('node only lib', function () {
             var src = helper.getProjectSources({
-                nodeProject: false
-            }, false);
+                nodeProject: true
+            }, {
+                includeLib: true
+            });
+
+            assert.deepEqual(src, [
+                '*.js',
+                '<%=buildConfig.libDirectory%>/**/*.js'
+            ]);
+        });
+
+        it('node only build', function () {
+            var src = helper.getProjectSources({
+                nodeProject: true
+            }, {
+                includeLib: false,
+                includeBuild: true
+            });
 
             assert.deepEqual(src, [
                 'project/**/*.js'
             ]);
         });
 
-        it('web, no bower.json, exclude', function () {
+        it('node only test', function () {
+            var src = helper.getProjectSources({
+                nodeProject: true
+            }, {
+                includeLib: false,
+                includeTest: true
+            });
+
+            assert.deepEqual(src, [
+                '<%=buildConfig.testDirectory%>/**/*spec.js'
+            ]);
+        });
+
+        it('web all, no bower.json', function () {
             var src = helper.getProjectSources({
                 nodeProject: false
-            }, true);
+            }, {
+                includeLib: true,
+                includeBuild: true,
+                includeTest: true
+            });
+
+            assert.deepEqual(src, [
+                'project/**/*.js',
+                '<%=buildConfig.testDirectory%>/**/*spec.js'
+            ]);
+        });
+
+        it('web defaults, no bower.json', function () {
+            var src = helper.getProjectSources({
+                nodeProject: false
+            });
 
             assert.deepEqual(src, []);
         });
 
-        it('web, no exclude', function () {
+        it('web only lib, no bower.json', function () {
             var src = helper.getProjectSources({
-                nodeProject: false,
-                bowerJSON: {
-                    main: 'test.js'
-                }
-            }, false);
+                nodeProject: false
+            }, {
+                includeLib: true
+            });
+
+            assert.deepEqual(src, []);
+        });
+
+        it('web only build, no bower.json', function () {
+            var src = helper.getProjectSources({
+                nodeProject: false
+            }, {
+                includeLib: false,
+                includeBuild: true
+            });
 
             assert.deepEqual(src, [
-                'test.js',
                 'project/**/*.js'
             ]);
         });
 
-        it('web, exclude', function () {
+        it('web only test, no bower.json', function () {
+            var src = helper.getProjectSources({
+                nodeProject: false
+            }, {
+                includeLib: false,
+                includeTest: true
+            });
+
+            assert.deepEqual(src, [
+                '<%=buildConfig.testDirectory%>/**/*spec.js'
+            ]);
+        });
+
+        it('web all', function () {
             var src = helper.getProjectSources({
                 nodeProject: false,
                 bowerJSON: {
                     main: 'test.js'
                 }
-            }, true);
+            }, {
+                includeLib: true,
+                includeBuild: true,
+                includeTest: true
+            });
+
+            assert.deepEqual(src, [
+                'test.js',
+                'project/**/*.js',
+                '<%=buildConfig.testDirectory%>/**/*spec.js'
+            ]);
+        });
+
+        it('web defaults', function () {
+            var src = helper.getProjectSources({
+                nodeProject: false,
+                bowerJSON: {
+                    main: 'test.js'
+                }
+            });
 
             assert.deepEqual(src, [
                 'test.js'
+            ]);
+        });
+
+        it('web only lib', function () {
+            var src = helper.getProjectSources({
+                nodeProject: false,
+                bowerJSON: {
+                    main: 'test.js'
+                }
+            }, {
+                includeLib: true
+            });
+
+            assert.deepEqual(src, [
+                'test.js'
+            ]);
+        });
+
+        it('web only build', function () {
+            var src = helper.getProjectSources({
+                nodeProject: false,
+                bowerJSON: {
+                    main: 'test.js'
+                }
+            }, {
+                includeLib: false,
+                includeBuild: true
+            });
+
+            assert.deepEqual(src, [
+                'project/**/*.js'
+            ]);
+        });
+
+        it('web only test', function () {
+            var src = helper.getProjectSources({
+                nodeProject: false,
+                bowerJSON: {
+                    main: 'test.js'
+                }
+            }, {
+                includeLib: false,
+                includeTest: true
+            });
+
+            assert.deepEqual(src, [
+                '<%=buildConfig.testDirectory%>/**/*spec.js'
             ]);
         });
     });

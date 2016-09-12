@@ -30,25 +30,59 @@ describe('Commons Tests', function () {
 
         describe('eslint', function () {
             it('node', function () {
-                assert.isDefined(commons.lint.eslint.node);
-                assert.isTrue(Object.keys(commons.lint.eslint.node.rules).length > 0);
-                assert.deepEqual(commons.lint.eslint.node.rules.strict, [
+                var config = commons.lint.eslint.node;
+
+                assert.isDefined(config);
+                assert.isTrue(Object.keys(config.rules).length > 0);
+                assert.deepEqual(config.rules.strict, [
                     2,
                     'global'
                 ]);
-                assert.isTrue(commons.lint.eslint.node.env.node);
-                assert.isUndefined(commons.lint.eslint.node.env.browser);
+                assert.isTrue(config.env.node);
+                assert.isUndefined(config.env.browser);
+                assert.isUndefined(config.env.mocha);
             });
 
             it('browser', function () {
-                assert.isDefined(commons.lint.eslint.web);
-                assert.isTrue(Object.keys(commons.lint.eslint.web.rules).length > 0);
-                assert.deepEqual(commons.lint.eslint.web.rules.strict, [
+                var config = commons.lint.eslint.web;
+
+                assert.isDefined(config);
+                assert.isTrue(Object.keys(config.rules).length > 0);
+                assert.deepEqual(config.rules.strict, [
                     2,
                     'function'
                 ]);
-                assert.isTrue(commons.lint.eslint.web.env.browser);
-                assert.isUndefined(commons.lint.eslint.web.env.node);
+                assert.isTrue(config.env.browser);
+                assert.isUndefined(config.env.node);
+                assert.isUndefined(config.env.mocha);
+            });
+
+            it('mocha', function () {
+                var config = commons.lint.eslint.mocha;
+
+                assert.isDefined(config);
+                assert.isTrue(Object.keys(config.rules).length > 0);
+                assert.deepEqual(config.rules.strict, [
+                    2,
+                    'global'
+                ]);
+                assert.isTrue(config.env.node);
+                assert.isUndefined(config.env.browser);
+                assert.isTrue(config.env.mocha);
+            });
+
+            it('karma', function () {
+                var config = commons.lint.eslint.karma;
+
+                assert.isDefined(config);
+                assert.isTrue(Object.keys(config.rules).length > 0);
+                assert.deepEqual(config.rules.strict, [
+                    2,
+                    'global'
+                ]);
+                assert.isTrue(config.env.browser);
+                assert.isUndefined(config.env.node);
+                assert.isTrue(config.env.mocha);
             });
         });
 

@@ -10,6 +10,8 @@ The commons library.
 * [Commons](#Commons) : <code>object</code>
     * [.lint.eslint.node](#Commons.lint.eslint.node) : <code>Object</code>
     * [.lint.eslint.web](#Commons.lint.eslint.web) : <code>Object</code>
+    * [.lint.eslint.mocha](#Commons.lint.eslint.mocha) : <code>Object</code>
+    * [.lint.eslint.karma](#Commons.lint.eslint.karma) : <code>Object</code>
     * [.lint.markdown](#Commons.lint.markdown) : <code>Object</code>
     * [.grunt](#Commons.grunt) : <code>Object</code>
     * [.grunt.config.initConfig](#Commons.grunt.config.initConfig) : <code>function</code>
@@ -25,6 +27,18 @@ Holds the node.js eslint config.
 
 ### Commons.lint.eslint.web : <code>Object</code>
 Holds the web eslint config.
+
+**Access:** public  
+<a name="Commons.lint.eslint.mocha"></a>
+
+### Commons.lint.eslint.mocha : <code>Object</code>
+Holds the mocha eslint config.
+
+**Access:** public  
+<a name="Commons.lint.eslint.karma"></a>
+
+### Commons.lint.eslint.karma : <code>Object</code>
+Holds the karma eslint config.
 
 **Access:** public  
 <a name="Commons.lint.markdown"></a>
