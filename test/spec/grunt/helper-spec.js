@@ -279,4 +279,26 @@ describe('Helper Tests', function () {
             assert.equal(src, 'test.js');
         });
     });
+
+    describe('getHTMLSources', function () {
+        it('simple', function () {
+            var paths = helper.getHTMLSources();
+
+            assert.deepEqual(paths, [
+                '<%=buildConfig.libDirectory%>/**/*.html',
+                '<%=buildConfig.docsDirectory%>/**/*.html'
+            ]);
+        });
+    });
+
+    describe('getCSSSources', function () {
+        it('simple', function () {
+            var paths = helper.getCSSSources();
+
+            assert.deepEqual(paths, [
+                '<%=buildConfig.libDirectory%>/**/*.css',
+                '<%=buildConfig.docsDirectory%>/**/*.css'
+            ]);
+        });
+    });
 });

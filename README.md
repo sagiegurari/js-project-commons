@@ -42,6 +42,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2016-09-13  | v1.0.13 | Adding html and css linting support |
 | 2016-09-12  | v1.0.12 | Maintenance |
 | 2016-09-12  | v1.0.10 | eslint will test also spec files |
 | 2016-09-11  | v1.0.9  | Maintenance |
