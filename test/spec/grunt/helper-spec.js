@@ -1,4 +1,5 @@
 'use strict';
+
 /*global describe: false, it: false*/
 
 var chai = require('chai');
@@ -41,6 +42,34 @@ describe('Helper Tests', function () {
 
             assert.isTrue(file.indexOf('karma') !== -1);
             assert.isTrue(file.indexOf('mocha') === -1);
+        });
+    });
+
+    describe('getJSHintTestConfigFile', function () {
+        it('node', function () {
+            var file = helper.getJSHintTestConfigFile({
+                nodeProject: true
+            });
+
+            assert.isTrue(file.indexOf('mocha') !== -1);
+            assert.isTrue(file.indexOf('karma') === -1);
+        });
+
+        it('web', function () {
+            var file = helper.getJSHintTestConfigFile({
+                nodeProject: false
+            });
+
+            assert.isTrue(file.indexOf('karma') !== -1);
+            assert.isTrue(file.indexOf('mocha') === -1);
+        });
+    });
+
+    describe('getJSCSTestConfigFile', function () {
+        it('test', function () {
+            var file = helper.getJSCSTestConfigFile();
+
+            assert.isTrue(file.indexOf('test') !== -1);
         });
     });
 

@@ -1,4 +1,5 @@
 'use strict';
+
 /*global describe: false, it: false */
 
 var path = require('path');
@@ -25,6 +26,20 @@ describe('Commons Tests', function () {
             it('defined', function () {
                 assert.isDefined(commons.lint.markdown);
                 assert.isTrue(Object.keys(commons.lint.markdown).length > 0);
+            });
+        });
+
+        describe('jshint', function () {
+            it('defined', function () {
+                assert.isDefined(commons.lint.jshint);
+                assert.isTrue(Object.keys(commons.lint.jshint).length > 0);
+            });
+        });
+
+        describe('jscs', function () {
+            it('defined', function () {
+                assert.isDefined(commons.lint.jscs);
+                assert.isTrue(Object.keys(commons.lint.jscs).length > 0);
             });
         });
 
@@ -85,113 +100,113 @@ describe('Commons Tests', function () {
                 assert.isTrue(config.env.mocha);
             });
         });
+    });
 
-        describe('grunt', function () {
-            describe('config', function () {
-                it('initConfig', function () {
-                    assert.isFunction(commons.grunt.config.initConfig);
-                });
-
-                it('node', function () {
-                    assert.isFunction(commons.grunt.config.node);
-                });
-
-                it('web', function () {
-                    assert.isFunction(commons.grunt.config.web);
-                });
+    describe('grunt', function () {
+        describe('config', function () {
+            it('initConfig', function () {
+                assert.isFunction(commons.grunt.config.initConfig);
             });
 
-            describe('task', function () {
-                it('common', function () {
-                    var counter = 0;
-                    var gruntMock = {
-                        registerTask: function () {
-                            counter++;
+            it('node', function () {
+                assert.isFunction(commons.grunt.config.node);
+            });
+
+            it('web', function () {
+                assert.isFunction(commons.grunt.config.web);
+            });
+        });
+
+        describe('task', function () {
+            it('common', function () {
+                var counter = 0;
+                var gruntMock = {
+                    registerTask: function () {
+                        counter++;
+                    }
+                };
+
+                var output = commons.grunt.task.common(gruntMock);
+                assert.isDefined(output);
+                assert.equal(counter, 6);
+            });
+
+            it('integrationTest', function () {
+                var counter = 0;
+                var gruntMock = {
+                    registerTask: function () {
+                        counter++;
+                    }
+                };
+
+                var output = commons.grunt.task.integrationTest(gruntMock);
+                assert.isDefined(output);
+                assert.equal(counter, 2);
+            });
+
+            it('jslint', function () {
+                var gruntMock = {
+                    file: {
+                        readJSON: function () {
+                            return 'test';
                         }
-                    };
+                    }
+                };
 
-                    var output = commons.grunt.task.common(gruntMock);
-                    assert.isDefined(output);
-                    assert.equal(counter, 6);
-                });
+                var output = commons.grunt.task.jslint(gruntMock);
+                assert.isDefined(output);
+            });
 
-                it('integrationTest', function () {
-                    var counter = 0;
-                    var gruntMock = {
-                        registerTask: function () {
-                            counter++;
+            it('lint', function () {
+                var counter = 0;
+                var gruntMock = {
+                    registerTask: function () {
+                        counter++;
+                    }
+                };
+
+                var output = commons.grunt.task.lint(gruntMock);
+                assert.isDefined(output);
+                assert.equal(counter, 1);
+            });
+
+            it('markdownlint', function () {
+                var gruntMock = {
+                    file: {
+                        readJSON: function () {
+                            return 'test';
                         }
-                    };
+                    }
+                };
 
-                    var output = commons.grunt.task.integrationTest(gruntMock);
-                    assert.isDefined(output);
-                    assert.equal(counter, 2);
-                });
+                var output = commons.grunt.task.markdownlint(gruntMock);
+                assert.isDefined(output);
+            });
 
-                it('jslint', function () {
-                    var gruntMock = {
-                        file: {
-                            readJSON: function () {
-                                return 'test';
-                            }
-                        }
-                    };
+            it('project', function () {
+                var counter = 0;
+                var gruntMock = {
+                    registerTask: function () {
+                        counter++;
+                    }
+                };
 
-                    var output = commons.grunt.task.jslint(gruntMock);
-                    assert.isDefined(output);
-                });
+                var output = commons.grunt.task.project(gruntMock);
+                assert.isDefined(output);
+                assert.equal(counter, 1);
+            });
 
-                it('lint', function () {
-                    var counter = 0;
-                    var gruntMock = {
-                        registerTask: function () {
-                            counter++;
-                        }
-                    };
+            it('topLevel', function () {
+                var counter = 0;
+                var gruntMock = {
+                    registerTask: function () {
+                        counter++;
+                    }
+                };
 
-                    var output = commons.grunt.task.lint(gruntMock);
-                    assert.isDefined(output);
-                    assert.equal(counter, 1);
-                });
-
-                it('markdownlint', function () {
-                    var gruntMock = {
-                        file: {
-                            readJSON: function () {
-                                return 'test';
-                            }
-                        }
-                    };
-
-                    var output = commons.grunt.task.markdownlint(gruntMock);
-                    assert.isDefined(output);
-                });
-
-                it('project', function () {
-                    var counter = 0;
-                    var gruntMock = {
-                        registerTask: function () {
-                            counter++;
-                        }
-                    };
-
-                    var output = commons.grunt.task.project(gruntMock);
-                    assert.isDefined(output);
-                    assert.equal(counter, 1);
-                });
-
-                it('topLevel', function () {
-                    var counter = 0;
-                    var gruntMock = {
-                        registerTask: function () {
-                            counter++;
-                        }
-                    };
-
-                    var output = commons.grunt.task.topLevel(gruntMock);
-                    assert.isDefined(output);
-                    assert.equal(counter, 4);
-                });
+                var output = commons.grunt.task.topLevel(gruntMock);
+                assert.isDefined(output);
+                assert.equal(counter, 4);
             });
         });
     });

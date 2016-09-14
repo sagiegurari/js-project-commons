@@ -12,6 +12,9 @@ The commons library.
     * [.lint.eslint.web](#Commons.lint.eslint.web) : <code>Object</code>
     * [.lint.eslint.mocha](#Commons.lint.eslint.mocha) : <code>Object</code>
     * [.lint.eslint.karma](#Commons.lint.eslint.karma) : <code>Object</code>
+    * [.lint.jshint.mocha](#Commons.lint.jshint.mocha) : <code>Object</code>
+    * [.lint.jshint.karma](#Commons.lint.jshint.karma) : <code>Object</code>
+    * [.lint.jscs.mocha](#Commons.lint.jscs.mocha) : <code>Object</code>
     * [.lint.html](#Commons.lint.html) : <code>Object</code>
     * [.lint.css](#Commons.lint.css) : <code>Object</code>
     * [.lint.markdown](#Commons.lint.markdown) : <code>Object</code>
@@ -41,6 +44,24 @@ Holds the mocha eslint config.
 
 ### Commons.lint.eslint.karma : <code>Object</code>
 Holds the karma eslint config.
+
+**Access:** public  
+<a name="Commons.lint.jshint.mocha"></a>
+
+### Commons.lint.jshint.mocha : <code>Object</code>
+Holds the mocha jshint config.
+
+**Access:** public  
+<a name="Commons.lint.jshint.karma"></a>
+
+### Commons.lint.jshint.karma : <code>Object</code>
+Holds the karma jshint config.
+
+**Access:** public  
+<a name="Commons.lint.jscs.mocha"></a>
+
+### Commons.lint.jscs.mocha : <code>Object</code>
+Holds the test jscs config.
 
 **Access:** public  
 <a name="Commons.lint.html"></a>

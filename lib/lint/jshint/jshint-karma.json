@@ -1,0 +1,9 @@
+{
+  "extends": "../../../.jshintrc",
+  "node": false,
+  "browser": true,
+  "mocha": true,
+  "globals": {
+    "angular": true
+  }
+}

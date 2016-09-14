@@ -1,0 +1,5 @@
+{
+  "preset": "../../../.jscs.json",
+  "requireNamedUnassignedFunctions": null,
+  "requireCamelCaseOrUpperCaseIdentifiers": null
+}
