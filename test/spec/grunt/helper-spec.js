@@ -73,6 +73,92 @@ describe('Helper Tests', function () {
         });
     });
 
+    describe('getJSLintTestConfig', function () {
+        it('node, null', function () {
+            var config = helper.getJSLintTestConfig({
+                nodeProject: true
+            }, null);
+
+            assert.isTrue(config.predef.indexOf('it') !== -1);
+            assert.isTrue(config.predef.indexOf('angular') === -1);
+        });
+
+        it('node, undefined', function () {
+            var config = helper.getJSLintTestConfig({
+                nodeProject: true
+            });
+
+            assert.isTrue(config.predef.indexOf('it') !== -1);
+            assert.isTrue(config.predef.indexOf('angular') === -1);
+        });
+
+        it('node, empty', function () {
+            var config = helper.getJSLintTestConfig({
+                nodeProject: true
+            }, {});
+
+            assert.isTrue(config.predef.indexOf('it') !== -1);
+            assert.isTrue(config.predef.indexOf('angular') === -1);
+        });
+
+        it('node, extend', function () {
+            var base = {
+                test: true
+            };
+            var config = helper.getJSLintTestConfig({
+                nodeProject: true
+            }, base);
+
+            assert.isTrue(config.predef.indexOf('it') !== -1);
+            assert.isTrue(config.predef.indexOf('angular') === -1);
+            assert.isTrue(config.test);
+            assert.isTrue(base.test);
+            assert.isUndefined(base.predef);
+        });
+
+        it('web, null', function () {
+            var config = helper.getJSLintTestConfig({
+                nodeProject: false
+            }, null);
+
+            assert.isTrue(config.predef.indexOf('it') !== -1);
+            assert.isTrue(config.predef.indexOf('angular') !== -1);
+        });
+
+        it('web, undefined', function () {
+            var config = helper.getJSLintTestConfig({
+                nodeProject: false
+            });
+
+            assert.isTrue(config.predef.indexOf('it') !== -1);
+            assert.isTrue(config.predef.indexOf('angular') !== -1);
+        });
+
+        it('web, empty', function () {
+            var config = helper.getJSLintTestConfig({
+                nodeProject: false
+            }, {});
+
+            assert.isTrue(config.predef.indexOf('it') !== -1);
+            assert.isTrue(config.predef.indexOf('angular') !== -1);
+        });
+
+        it('web, extend', function () {
+            var base = {
+                test: true
+            };
+            var config = helper.getJSLintTestConfig({
+                nodeProject: false
+            }, base);
+
+            assert.isTrue(config.predef.indexOf('it') !== -1);
+            assert.isTrue(config.predef.indexOf('angular') !== -1);
+            assert.isTrue(config.test);
+            assert.isTrue(base.test);
+            assert.isUndefined(base.predef);
+        });
+    });
+
     describe('getProjectSources', function () {
         it('node all', function () {
             var src = helper.getProjectSources({

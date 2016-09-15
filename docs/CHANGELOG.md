@@ -1,5 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2016-09-15  | v1.0.17 | jslint will test spec files |
 | 2016-09-14  | v1.0.16 | Maintenance |
 | 2016-09-14  | v1.0.15 | jshint and jscs will test also spec files |
 | 2016-09-13  | v1.0.14 | Maintenance |
