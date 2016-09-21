@@ -1,6 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2016-09-21  | v1.0.23 | Maintenance |
+| 2016-09-21  | v1.0.24 | Maintenance |
 | 2016-09-21  | v1.0.18 | Added api docs to readme generation task |
 | 2016-09-15  | v1.0.17 | jslint will test spec files |
 | 2016-09-14  | v1.0.16 | Maintenance |
