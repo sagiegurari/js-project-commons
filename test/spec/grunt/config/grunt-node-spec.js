@@ -13,6 +13,9 @@ describe('Grunt Node Tests', function () {
             registerTask: function () {
                 counter++;
             },
+            registerMultiTask: function () {
+                return undefined;
+            },
             file: {
                 readJSON: function () {
                     return {};
@@ -54,6 +57,9 @@ describe('Grunt Node Tests', function () {
         var gruntMock = {
             registerTask: function () {
                 counter++;
+            },
+            registerMultiTask: function () {
+                return undefined;
             },
             file: {
                 readJSON: function () {

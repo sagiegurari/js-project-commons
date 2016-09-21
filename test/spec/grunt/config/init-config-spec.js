@@ -46,6 +46,9 @@ describe('Grunt initConfig Tests', function () {
             registerTask: function () {
                 return undefined;
             },
+            registerMultiTask: function () {
+                return undefined;
+            },
             file: {
                 readJSON: function () {
                     return {};
@@ -85,6 +88,9 @@ describe('Grunt initConfig Tests', function () {
         var validated = false;
         var gruntMock = {
             registerTask: function () {
+                return undefined;
+            },
+            registerMultiTask: function () {
                 return undefined;
             },
             file: {
@@ -132,6 +138,9 @@ describe('Grunt initConfig Tests', function () {
             registerTask: function () {
                 return undefined;
             },
+            registerMultiTask: function () {
+                return undefined;
+            },
             file: {
                 readJSON: function () {
                     return {};
@@ -171,6 +180,9 @@ describe('Grunt initConfig Tests', function () {
         var validated = false;
         var gruntMock = {
             registerTask: function () {
+                return undefined;
+            },
+            registerMultiTask: function () {
                 return undefined;
             },
             file: {
@@ -216,6 +228,9 @@ describe('Grunt initConfig Tests', function () {
         var validated = false;
         var gruntMock = {
             registerTask: function () {
+                return undefined;
+            },
+            registerMultiTask: function () {
                 return undefined;
             },
             file: {

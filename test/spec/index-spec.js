@@ -128,7 +128,7 @@ describe('Commons Tests', function () {
 
                 var output = commons.grunt.task.common(gruntMock);
                 assert.isDefined(output);
-                assert.equal(counter, 6);
+                assert.equal(counter, 5);
             });
 
             it('integrationTest', function () {
