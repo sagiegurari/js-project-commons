@@ -183,19 +183,6 @@ describe('Commons Tests', function () {
                 assert.isDefined(output);
             });
 
-            it('project', function () {
-                var counter = 0;
-                var gruntMock = {
-                    registerTask: function () {
-                        counter++;
-                    }
-                };
-
-                var output = commons.grunt.task.project(gruntMock);
-                assert.isDefined(output);
-                assert.equal(counter, 1);
-            });
-
             it('topLevel', function () {
                 var counter = 0;
                 var gruntMock = {

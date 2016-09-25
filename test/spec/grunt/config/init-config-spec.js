@@ -69,6 +69,8 @@ describe('Grunt initConfig Tests', function () {
             }
         };
 
+        delete global.gruntConfig;
+
         initConfig(gruntMock, {
             buildConfig: {
                 disableGruntPlugins: true,
@@ -82,6 +84,8 @@ describe('Grunt initConfig Tests', function () {
         });
 
         assert.isTrue(validated);
+
+        assert.isDefined(global.gruntConfig.apidoc2readme);
     });
 
     it('node, with project config', function () {
@@ -161,6 +165,8 @@ describe('Grunt initConfig Tests', function () {
             }
         };
 
+        delete global.gruntConfig;
+
         initConfig(gruntMock, {
             buildConfig: {
                 disableGruntPlugins: true,
@@ -174,6 +180,8 @@ describe('Grunt initConfig Tests', function () {
         });
 
         assert.isTrue(validated);
+
+        assert.isDefined(global.gruntConfig.apidoc2readme);
     });
 
     it('web, with project config', function () {
