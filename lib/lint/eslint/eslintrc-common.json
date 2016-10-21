@@ -79,7 +79,13 @@
       "unix"
     ],
     "lines-around-comment": "off",
-    "lines-around-directive": "off",
+    "lines-around-directive": [
+      "error",
+      {
+        "before": "never",
+        "after": "always"
+      }
+    ],
     "max-depth": "off",
     "max-len ": "off",
     "max-nested-callbacks": "off",
