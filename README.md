@@ -42,7 +42,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2016-10-21  | v1.0.28 | Maintenance |
+| 2016-11-02  | v1.0.29 | Maintenance |
 | 2016-09-21  | v1.0.18 | Added api docs to readme generation task |
 | 2016-09-15  | v1.0.17 | jslint will test spec files |
 | 2016-09-14  | v1.0.16 | Maintenance |
