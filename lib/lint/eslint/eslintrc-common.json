@@ -4,6 +4,7 @@
   },
   "extends": "eslint:all",
   "rules": {
+    "accessor-pairs": "off",
     "array-bracket-spacing": [
       "error",
       "never"
@@ -136,6 +137,7 @@
     "prefer-const": "off",
     "prefer-numeric-literals": "off",
     "prefer-rest-params": "off",
+    "prefer-spread": "off",
     "prefer-template": "off",
     "quote-props": [
       "error",
