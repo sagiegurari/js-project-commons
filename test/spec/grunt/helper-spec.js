@@ -7,21 +7,21 @@ var assert = chai.assert;
 var helper = require('../../../lib/grunt/helper');
 
 describe('Helper Tests', function () {
-    describe('getESlintTaskPrefix', function () {
+    describe('isESlintSupported', function () {
         it('es6 supported', function () {
-            var prefix = helper.getESlintTaskPrefix({
+            var supported = helper.isESlintSupported({
                 es6Support: true
             });
 
-            assert.equal(prefix, '');
+            assert.isTrue(supported);
         });
 
         it('es6 not supported', function () {
-            var prefix = helper.getESlintTaskPrefix({
+            var supported = helper.isESlintSupported({
                 es6Support: false
             });
 
-            assert.equal(prefix, 'force:');
+            assert.isFalse(supported);
         });
     });
 
