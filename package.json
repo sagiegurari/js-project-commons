@@ -40,9 +40,6 @@
     "grunt": "grunt"
   },
   "dependencies": {
-    "chai": "latest",
-    "grunt": "latest",
-    "grunt-cli": "latest",
     "grunt-concurrent": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-csslint": "latest",
@@ -59,11 +56,15 @@
     "grunt-jsonlint": "latest",
     "grunt-markdownlint": "latest",
     "grunt-mocha-istanbul": "latest",
-    "husky": "latest",
     "istanbul": "latest",
     "mocha": "latest",
     "node.extend": "latest",
     "time-grunt": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "latest",
+    "grunt": "latest",
+    "grunt-cli": "latest",
+    "husky": "latest"
+  }
 }
