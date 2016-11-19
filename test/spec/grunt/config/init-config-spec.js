@@ -54,6 +54,9 @@ describe('Grunt initConfig Tests', function () {
                     return {};
                 }
             },
+            loadNpmTasks: function () {
+                return undefined;
+            },
             initConfig: function (config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.testConfig, {
@@ -101,6 +104,9 @@ describe('Grunt initConfig Tests', function () {
                 readJSON: function () {
                     return {};
                 }
+            },
+            loadNpmTasks: function () {
+                return undefined;
             },
             initConfig: function (config) {
                 assert.isDefined(config);
@@ -150,6 +156,9 @@ describe('Grunt initConfig Tests', function () {
                     return {};
                 }
             },
+            loadNpmTasks: function () {
+                return undefined;
+            },
             initConfig: function (config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.testConfig, {
@@ -191,6 +200,9 @@ describe('Grunt initConfig Tests', function () {
                 return undefined;
             },
             registerMultiTask: function () {
+                return undefined;
+            },
+            loadNpmTasks: function () {
                 return undefined;
             },
             file: {
@@ -239,6 +251,9 @@ describe('Grunt initConfig Tests', function () {
                 return undefined;
             },
             registerMultiTask: function () {
+                return undefined;
+            },
+            loadNpmTasks: function () {
                 return undefined;
             },
             file: {

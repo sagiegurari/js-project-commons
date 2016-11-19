@@ -20,6 +20,9 @@ describe('Grunt Node Tests', function () {
                 readJSON: function () {
                     return {};
                 }
+            },
+            loadNpmTasks: function () {
+                return undefined;
             }
         };
 
@@ -65,6 +68,9 @@ describe('Grunt Node Tests', function () {
                 readJSON: function () {
                     return {};
                 }
+            },
+            loadNpmTasks: function () {
+                return undefined;
             }
         };
 
