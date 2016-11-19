@@ -38,7 +38,7 @@ describe('Grunt Node Tests', function () {
             test: true,
             value: 1000
         });
-        assert.equal(counter, 14);
+        assert.equal(counter, 15);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
@@ -50,6 +50,7 @@ describe('Grunt Node Tests', function () {
         assert.isDefined(output.jshint);
         assert.isDefined(output.jslint);
         assert.isDefined(output.markdownlint);
+        assert.isDefined(output.versioncheck);
         assert.isDefined(output.shell);
         assert.isDefined(output.shell.docker);
         assert.isDefined(output.mocha_istanbul);
@@ -90,7 +91,7 @@ describe('Grunt Node Tests', function () {
             test: true,
             value: 1000
         });
-        assert.equal(counter, 14);
+        assert.equal(counter, 15);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
@@ -102,6 +103,7 @@ describe('Grunt Node Tests', function () {
         assert.isDefined(output.jshint);
         assert.isDefined(output.jslint);
         assert.isDefined(output.markdownlint);
+        assert.isDefined(output.versioncheck);
         assert.isDefined(output.shell);
         assert.isDefined(output.shell.docker);
         assert.isDefined(output.mocha_istanbul);

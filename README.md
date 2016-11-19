@@ -42,7 +42,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2016-11-19  | v1.0.35 | Maintenance |
+| 2016-11-19  | v1.0.37 | Maintenance |
 | 2016-11-19  | v1.0.34 | Build dependencies are now packaged and loaded internally |
 | 2016-11-15  | v1.0.33 | Maintenance |
 | 2016-09-21  | v1.0.18 | Added api docs to readme generation task |
