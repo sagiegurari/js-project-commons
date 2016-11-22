@@ -1,6 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2016-11-19  | v1.0.38 | Maintenance |
+| 2016-11-22  | v1.0.39 | Maintenance |
 | 2016-11-19  | v1.0.34 | Build dependencies are now packaged and loaded internally |
 | 2016-11-15  | v1.0.33 | Maintenance |
 | 2016-09-21  | v1.0.18 | Added api docs to readme generation task |

@@ -2,7 +2,6 @@
 
 [![NPM Version](http://img.shields.io/npm/v/js-project-commons.svg?style=flat)](https://www.npmjs.org/package/js-project-commons) [![Build Status](https://travis-ci.org/sagiegurari/js-project-commons.svg)](http://travis-ci.org/sagiegurari/js-project-commons) [![Coverage Status](https://coveralls.io/repos/sagiegurari/js-project-commons/badge.svg)](https://coveralls.io/r/sagiegurari/js-project-commons) [![bitHound Code](https://www.bithound.io/github/sagiegurari/js-project-commons/badges/code.svg)](https://www.bithound.io/github/sagiegurari/js-project-commons) [![Inline docs](http://inch-ci.org/github/sagiegurari/js-project-commons.svg?branch=master)](http://inch-ci.org/github/sagiegurari/js-project-commons)<br>
 [![License](https://img.shields.io/npm/l/js-project-commons.svg?style=flat)](https://github.com/sagiegurari/js-project-commons/blob/master/LICENSE) [![Total Downloads](https://img.shields.io/npm/dt/js-project-commons.svg?style=flat)](https://www.npmjs.org/package/js-project-commons) [![Dependency Status](https://david-dm.org/sagiegurari/js-project-commons.svg)](https://david-dm.org/sagiegurari/js-project-commons) [![devDependency Status](https://david-dm.org/sagiegurari/js-project-commons/dev-status.svg)](https://david-dm.org/sagiegurari/js-project-commons?type=dev)<br>
-[![Retire Status](http://retire.insecurity.today/api/image?uri=https://raw.githubusercontent.com/sagiegurari/js-project-commons/master/package.json)](http://retire.insecurity.today/api/image?uri=https://raw.githubusercontent.com/sagiegurari/js-project-commons/master/package.json)
 
 > Common web and node.js grunt tasks/lint configs/md templates and so on...
 
@@ -42,7 +41,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2016-11-19  | v1.0.38 | Maintenance |
+| 2016-11-22  | v1.0.39 | Maintenance |
 | 2016-11-19  | v1.0.34 | Build dependencies are now packaged and loaded internally |
 | 2016-11-15  | v1.0.33 | Maintenance |
 | 2016-09-21  | v1.0.18 | Added api docs to readme generation task |
