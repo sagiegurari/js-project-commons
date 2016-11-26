@@ -4,9 +4,30 @@
 
 var chai = require('chai');
 var assert = chai.assert;
+var path = require('path');
 var helper = require('../../../lib/grunt/helper');
 
 describe('Helper Tests', function () {
+    describe('getRepoName', function () {
+        it('valid', function () {
+            var output = helper.getRepoName({
+                projectRoot: path.join(__dirname, '../../../')
+            });
+
+            assert.strictEqual(output, 'sagiegurari/js-project-commons');
+        });
+    });
+
+    describe('getRepoUserName', function () {
+        it('valid', function () {
+            var output = helper.getRepoUserName({
+                projectRoot: path.join(__dirname, '../../../')
+            });
+
+            assert.strictEqual(output, 'sagiegurari');
+        });
+    });
+
     describe('isESlintSupported', function () {
         it('es6 supported', function () {
             var supported = helper.isESlintSupported({

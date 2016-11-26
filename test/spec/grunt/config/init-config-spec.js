@@ -264,6 +264,10 @@ describe('Grunt initConfig Tests', function () {
             initConfig: function (config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.buildConfig.packageJSON, {
+                    repository: {
+                        type: 'git',
+                        url: 'http://github.com/sagiegurari/js-project-commons.git'
+                    },
                     test: true
                 });
                 assert.deepEqual(config.buildConfig.bowerJSON, {

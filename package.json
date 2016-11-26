@@ -1,6 +1,6 @@
 {
   "name": "js-project-commons",
-  "version": "1.0.39",
+  "version": "1.0.40",
   "description": "Common web and node.js grunt tasks/lint configs/md templates and so on...",
   "author": {
     "name": "Sagie Gur-Ari",
@@ -37,6 +37,7 @@
     "jstest": "grunt jstest",
     "debug": "mocha --debug-brk=5858 --no-timeouts --ui bdd --reporter spec --recursive ./test/spec",
     "prepush": "npm run build",
+    "postpublish": "grunt post-publish",
     "grunt": "grunt"
   },
   "dependencies": {
@@ -47,6 +48,7 @@
     "grunt-coveralls": "latest",
     "grunt-eslint": "latest",
     "grunt-gitdown": "latest",
+    "grunt-github-releaser": "latest",
     "grunt-htmllint": "latest",
     "grunt-jsbeautifier": "latest",
     "grunt-jscs": "latest",

@@ -38,7 +38,7 @@ describe('Grunt Web Tests', function () {
             test: true,
             value: 1000
         });
-        assert.equal(counter, 15);
+        assert.equal(counter, 16);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
@@ -91,7 +91,7 @@ describe('Grunt Web Tests', function () {
             test: true,
             value: 1000
         });
-        assert.equal(counter, 15);
+        assert.equal(counter, 16);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
