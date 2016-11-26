@@ -4,6 +4,7 @@
   },
   "extends": "eslint:all",
   "rules": {
+    "capitalized-comments": "off",
     "accessor-pairs": "off",
     "array-bracket-spacing": [
       "error",
