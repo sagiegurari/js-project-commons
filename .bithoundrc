@@ -40,6 +40,7 @@
       "grunt-jsonlint",
       "grunt-karma",
       "grunt-mocha-istanbul",
+      "grunt-release",
       "grunt-shell",
       "grunt-version-check",
       "husky",
