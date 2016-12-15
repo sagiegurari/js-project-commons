@@ -1,5 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2016-12-15  | v1.0.46 | Adding security validations to grunt build |
 | 2016-12-14  | v1.0.45 | Maintenance |
 | 2016-11-26  | v1.0.44 | Create github release grunt task |
 | 2016-11-22  | v1.0.39 | Maintenance |

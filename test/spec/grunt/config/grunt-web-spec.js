@@ -38,7 +38,7 @@ describe('Grunt Web Tests', function () {
             test: true,
             value: 1000
         });
-        assert.equal(counter, 16);
+        assert.equal(counter, 19);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
@@ -54,6 +54,7 @@ describe('Grunt Web Tests', function () {
         assert.isDefined(output.shell);
         assert.isDefined(output.shell.docker);
         assert.isDefined(output.karma);
+        assert.isDefined(output.retire);
     });
 
     it('with project config', function () {
@@ -91,7 +92,7 @@ describe('Grunt Web Tests', function () {
             test: true,
             value: 1000
         });
-        assert.equal(counter, 16);
+        assert.equal(counter, 19);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
@@ -107,6 +108,7 @@ describe('Grunt Web Tests', function () {
         assert.isDefined(output.shell);
         assert.isDefined(output.shell.docker);
         assert.isDefined(output.karma);
+        assert.isDefined(output.retire);
         assert.isDefined(output.myProj);
     });
 });
