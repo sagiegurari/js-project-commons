@@ -118,19 +118,6 @@ describe('Commons Tests', function () {
         });
 
         describe('task', function () {
-            it('common', function () {
-                var counter = 0;
-                var gruntMock = {
-                    registerTask: function () {
-                        counter++;
-                    }
-                };
-
-                var output = commons.grunt.task.common(gruntMock);
-                assert.isDefined(output);
-                assert.equal(counter, 6);
-            });
-
             it('integrationTest', function () {
                 var counter = 0;
                 var gruntMock = {
@@ -193,7 +180,7 @@ describe('Commons Tests', function () {
 
                 var output = commons.grunt.task.topLevel(gruntMock);
                 assert.isDefined(output);
-                assert.equal(counter, 4);
+                assert.equal(counter, 9);
             });
         });
     });

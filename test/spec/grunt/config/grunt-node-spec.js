@@ -38,7 +38,7 @@ describe('Grunt Node Tests', function () {
             test: true,
             value: 1000
         });
-        assert.equal(counter, 19);
+        assert.equal(counter, 18);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
@@ -92,7 +92,7 @@ describe('Grunt Node Tests', function () {
             test: true,
             value: 1000
         });
-        assert.equal(counter, 19);
+        assert.equal(counter, 18);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
