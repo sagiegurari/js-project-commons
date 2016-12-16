@@ -16,7 +16,8 @@ The commons library.
     * [.lint.jshint.karma](#Commons.lint.jshint.karma) : <code>Object</code>
     * [.lint.jscs.test](#Commons.lint.jscs.test) : <code>Object</code>
     * [.lint.html](#Commons.lint.html) : <code>Object</code>
-    * [.lint.css](#Commons.lint.css) : <code>Object</code>
+    * [.lint.csslint](#Commons.lint.csslint) : <code>Object</code>
+    * [.lint.stylelint](#Commons.lint.stylelint) : <code>Object</code>
     * [.lint.markdown](#Commons.lint.markdown) : <code>Object</code>
     * [.grunt](#Commons.grunt) : <code>Object</code>
     * [.grunt.config.initConfig](#Commons.grunt.config.initConfig) : <code>function</code>
@@ -70,10 +71,16 @@ Holds the test jscs config.
 Holds the html lint rules.
 
 **Access:** public  
-<a name="Commons.lint.css"></a>
+<a name="Commons.lint.csslint"></a>
 
-### Commons.lint.css : <code>Object</code>
-Holds the css lint rules.
+### Commons.lint.csslint : <code>Object</code>
+Holds the csslint rules.
+
+**Access:** public  
+<a name="Commons.lint.stylelint"></a>
+
+### Commons.lint.stylelint : <code>Object</code>
+Holds the stylelint rules.
 
 **Access:** public  
 <a name="Commons.lint.markdown"></a>

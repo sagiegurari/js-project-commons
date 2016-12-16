@@ -29,6 +29,20 @@ describe('Commons Tests', function () {
             });
         });
 
+        describe('csslint', function () {
+            it('defined', function () {
+                assert.isDefined(commons.lint.csslint);
+                assert.isTrue(Object.keys(commons.lint.csslint).length > 0);
+            });
+        });
+
+        describe('stylelint', function () {
+            it('defined', function () {
+                assert.isDefined(commons.lint.stylelint);
+                assert.isTrue(Object.keys(commons.lint.stylelint).length > 0);
+            });
+        });
+
         describe('jshint', function () {
             it('defined', function () {
                 assert.isDefined(commons.lint.jshint);
