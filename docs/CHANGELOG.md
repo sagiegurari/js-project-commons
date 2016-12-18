@@ -1,6 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2016-12-18  | v1.0.51 | Maintenance |
+| 2016-12-18  | v1.0.52 | Maintenance |
 | 2016-12-16  | v1.0.50 | Adding stylelint to grunt build |
 | 2016-12-15  | v1.0.49 | Maintenance |
 | 2016-12-15  | v1.0.48 | Adding security validations to grunt build |
