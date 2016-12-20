@@ -50,6 +50,8 @@ describe('Grunt Web Tests', function () {
         assert.isDefined(output.jshint);
         assert.isDefined(output.jslint);
         assert.isDefined(output.markdownlint);
+        assert.isDefined(output.htmllint);
+        assert.isDefined(output.htmlhint);
         assert.isDefined(output.versioncheck);
         assert.isDefined(output.shell);
         assert.isDefined(output.shell.docker);
@@ -104,6 +106,8 @@ describe('Grunt Web Tests', function () {
         assert.isDefined(output.jshint);
         assert.isDefined(output.jslint);
         assert.isDefined(output.markdownlint);
+        assert.isDefined(output.htmllint);
+        assert.isDefined(output.htmlhint);
         assert.isDefined(output.versioncheck);
         assert.isDefined(output.shell);
         assert.isDefined(output.shell.docker);
