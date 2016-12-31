@@ -41,6 +41,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2016-12-31  | v1.0.55 | Maintenance |
 | 2016-12-21  | v1.0.54 | Adding htmlhint to grunt build |
 | 2016-12-20  | v1.0.53 | Maintenance |
 | 2016-12-16  | v1.0.50 | Adding stylelint to grunt build |
