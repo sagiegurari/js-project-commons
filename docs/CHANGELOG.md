@@ -1,5 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2017-01-07  | v1.0.58 | Maintenance |
 | 2017-01-06  | v1.0.57 | Updated api docs to readme generation task |
 | 2016-12-31  | v1.0.56 | Maintenance |
 | 2016-12-21  | v1.0.54 | Adding htmlhint to grunt build |
