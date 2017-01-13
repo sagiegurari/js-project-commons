@@ -22,10 +22,10 @@ describe('Commons Tests', function () {
     var commons = require('../../');
 
     describe('lint', function () {
-        describe('markdown', function () {
+        describe('markdownlint', function () {
             it('defined', function () {
-                assert.isDefined(commons.lint.markdown);
-                assert.isTrue(Object.keys(commons.lint.markdown).length > 0);
+                assert.isDefined(commons.lint.markdownlint);
+                assert.isTrue(Object.keys(commons.lint.markdownlint).length > 0);
             });
         });
 

@@ -437,4 +437,15 @@ describe('Helper Tests', function () {
             ]);
         });
     });
+
+    describe('getMDFiles', function () {
+        it('simple', function () {
+            var paths = helper.getMDFiles();
+
+            assert.deepEqual(paths, [
+                '*.md',
+                '.github/*.md'
+            ]);
+        });
+    });
 });

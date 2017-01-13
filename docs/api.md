@@ -19,7 +19,7 @@ The commons library.
     * [.lint.htmlhint](#Commons.lint.htmlhint) : <code>Object</code>
     * [.lint.csslint](#Commons.lint.csslint) : <code>Object</code>
     * [.lint.stylelint](#Commons.lint.stylelint) : <code>Object</code>
-    * [.lint.markdown](#Commons.lint.markdown) : <code>Object</code>
+    * [.lint.markdownlint](#Commons.lint.markdownlint) : <code>Object</code>
     * [.grunt](#Commons.grunt) : <code>Object</code>
     * [.grunt.config.initConfig](#Commons.grunt.config.initConfig) : <code>function</code>
     * [.grunt.task](#Commons.grunt.task) : <code>Object</code>
@@ -90,9 +90,9 @@ Holds the csslint rules.
 Holds the stylelint rules.
 
 **Access:** public  
-<a name="Commons.lint.markdown"></a>
+<a name="Commons.lint.markdownlint"></a>
 
-### Commons.lint.markdown : <code>Object</code>
+### Commons.lint.markdownlint : <code>Object</code>
 Holds the markdown lint rules.
 
 **Access:** public  

@@ -43,6 +43,7 @@ describe('Grunt Node Tests', function () {
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
         assert.isDefined(output.eslint);
+        assert.isDefined(output.filenames);
         assert.isDefined(output.gitdown);
         assert.isDefined(output.jsbeautifier);
         assert.isDefined(output.jscs);
@@ -99,6 +100,7 @@ describe('Grunt Node Tests', function () {
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
         assert.isDefined(output.eslint);
+        assert.isDefined(output.filenames);
         assert.isDefined(output.gitdown);
         assert.isDefined(output.jsbeautifier);
         assert.isDefined(output.jscs);
