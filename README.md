@@ -41,6 +41,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2017-01-13  | v1.0.60 | No security validation for npm dependencies for web projects |
 | 2017-01-13  | v1.0.59 | Adding file name linting |
 | 2017-01-07  | v1.0.58 | Maintenance |
 | 2017-01-06  | v1.0.57 | Updated api docs to readme generation task |
