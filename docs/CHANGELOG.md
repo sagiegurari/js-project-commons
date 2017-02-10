@@ -1,5 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2017-02-10  | v1.0.61 | Maintenance |
 | 2017-01-13  | v1.0.60 | No security validation for npm dependencies for web projects |
 | 2017-01-13  | v1.0.59 | Adding file name linting |
 | 2017-01-07  | v1.0.58 | Maintenance |
