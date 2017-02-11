@@ -194,7 +194,7 @@ describe('Commons Tests', function () {
 
                 var output = commons.grunt.task.topLevel(gruntMock);
                 assert.isDefined(output);
-                assert.equal(counter, 9);
+                assert.equal(counter, 10);
             });
         });
     });
