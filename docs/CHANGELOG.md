@@ -1,5 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2017-02-13  | v1.0.63 | jsdoc2md fix for windows |
 | 2017-02-11  | v1.0.62 | Added env validation for build |
 | 2017-02-10  | v1.0.61 | Maintenance |
 | 2017-01-13  | v1.0.60 | No security validation for npm dependencies for web projects |
