@@ -1,5 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2017-04-11  | v1.0.68 | Modify stylelint rules configuration |
 | 2017-03-09  | v1.0.67 | Maintenance |
 | 2017-02-13  | v1.0.63 | jsdoc2md fix for windows |
 | 2017-02-11  | v1.0.62 | Added env validation for build |
