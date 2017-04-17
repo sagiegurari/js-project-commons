@@ -41,7 +41,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2017-04-17  | v1.0.70 | Added YAML validations |
+| 2017-04-17  | v1.0.71 | Added YAML validations |
 | 2017-04-11  | v1.0.69 | Maintenance |
 | 2017-04-11  | v1.0.68 | Modify stylelint rules configuration |
 | 2017-03-09  | v1.0.67 | Maintenance |
