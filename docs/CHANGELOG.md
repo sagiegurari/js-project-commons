@@ -1,6 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2017-04-17  | v1.0.74 | Maintenance |
+| 2017-04-18  | v1.0.75 | Maintenance |
 | 2017-04-17  | v1.0.72 | Added YAML validations |
 | 2017-04-11  | v1.0.69 | Maintenance |
 | 2017-04-11  | v1.0.68 | Modify stylelint rules configuration |
