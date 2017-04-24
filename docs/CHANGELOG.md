@@ -1,5 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2017-04-24  | v1.0.76 | Added snyk validations |
 | 2017-04-18  | v1.0.75 | Maintenance |
 | 2017-04-17  | v1.0.72 | Added YAML validations |
 | 2017-04-11  | v1.0.69 | Maintenance |

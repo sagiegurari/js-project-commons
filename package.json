@@ -1,6 +1,6 @@
 {
   "name": "js-project-commons",
-  "version": "1.0.75",
+  "version": "1.0.76",
   "description": "Common web and node.js grunt tasks/lint configs/md templates and so on...",
   "author": {
     "name": "Sagie Gur-Ari",
@@ -60,12 +60,15 @@
     "grunt-mocha-istanbul": "latest",
     "grunt-release": "latest",
     "grunt-retire": "latest",
+    "grunt-shell": "latest",
+    "grunt-snyk": "latest",
     "grunt-stylelint": "latest",
     "grunt-version-check": "latest",
     "grunt-yaml-validator": "latest",
     "istanbul": "latest",
     "mocha": "latest",
     "node.extend": "latest",
+    "snyk": "latest",
     "stylelint-config-standard": "latest",
     "time-grunt": "latest"
   },
