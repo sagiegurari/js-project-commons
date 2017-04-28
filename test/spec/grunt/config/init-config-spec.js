@@ -293,6 +293,59 @@ describe('Grunt initConfig Tests', function () {
         assert.isTrue(validated);
     });
 
+    it('dual, no project config', function () {
+        var validated = false;
+        var gruntMock = {
+            registerTask: function () {
+                return undefined;
+            },
+            registerMultiTask: function () {
+                return undefined;
+            },
+            file: {
+                readJSON: function () {
+                    return {};
+                }
+            },
+            loadNpmTasks: function () {
+                return undefined;
+            },
+            initConfig: function (config) {
+                assert.isDefined(config);
+                assert.deepEqual(config.testConfig, {
+                    test: true,
+                    value: 1000
+                });
+
+                assert.isDefined(config.clean);
+                assert.isDefined(config.mocha_istanbul);
+                assert.isDefined(config.karma);
+                assert.isUndefined(config.myProj);
+
+                validated = true;
+            }
+        };
+
+        delete global.gruntConfig;
+
+        initConfig(gruntMock, {
+            buildConfig: {
+                disableGruntPlugins: true,
+                projectRoot: path.join(__dirname, '../../../..'),
+                nodeProject: false,
+                dualProject: true
+            },
+            testConfig: {
+                test: true,
+                value: 1000
+            }
+        });
+
+        assert.isTrue(validated);
+
+        assert.isDefined(global.gruntConfig.apidoc2readme);
+    });
+
     it('es6 option defined', function () {
         var validated = false;
         var gruntMock = {
