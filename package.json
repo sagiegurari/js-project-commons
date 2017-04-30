@@ -1,6 +1,6 @@
 {
   "name": "js-project-commons",
-  "version": "1.0.83",
+  "version": "1.0.84",
   "description": "Common web and node.js grunt tasks/lint configs/md templates and so on...",
   "author": {
     "name": "Sagie Gur-Ari",
