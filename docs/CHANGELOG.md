@@ -1,6 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2017-04-30  | v1.0.86 | Maintenance |
+| 2017-05-01  | v1.0.87 | Maintenance |
 | 2017-04-28  | v1.0.83 | Add support for simple dual web/node projects |
 | 2017-04-27  | v1.0.79 | Maintenance |
 | 2017-04-24  | v1.0.76 | Added snyk validations |
