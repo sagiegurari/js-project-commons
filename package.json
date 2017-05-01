@@ -1,6 +1,6 @@
 {
   "name": "js-project-commons",
-  "version": "1.0.87",
+  "version": "1.0.88",
   "description": "Common web and node.js grunt tasks/lint configs/md templates and so on...",
   "author": {
     "name": "Sagie Gur-Ari",
@@ -46,6 +46,7 @@
     "grunt-contrib-csslint": "latest",
     "grunt-contrib-jshint": "latest",
     "grunt-coveralls": "latest",
+    "grunt-env": "latest",
     "grunt-eslint": "latest",
     "grunt-filenames": "latest",
     "grunt-gitdown": "latest",
