@@ -41,6 +41,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2017-05-01  | v1.0.90 | Maintenance |
 | 2017-05-01  | v1.0.89 | Load env vars from file for build process |
 | 2017-05-01  | v1.0.87 | Maintenance |
 | 2017-04-28  | v1.0.83 | Add support for simple dual web/node projects |

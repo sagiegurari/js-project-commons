@@ -40,7 +40,7 @@ describe('Grunt Web Tests', function () {
             value: 1000,
             es6Support: true
         });
-        assert.equal(counter, 21);
+        assert.equal(counter, 22);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
@@ -99,7 +99,7 @@ describe('Grunt Web Tests', function () {
             value: 1000,
             es6Support: true
         });
-        assert.equal(counter, 21);
+        assert.equal(counter, 22);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
@@ -155,7 +155,7 @@ describe('Grunt Web Tests', function () {
             value: 1000,
             es6Support: false
         });
-        assert.equal(counter, 21);
+        assert.equal(counter, 22);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
@@ -214,7 +214,7 @@ describe('Grunt Web Tests', function () {
             value: 1000,
             es6Support: false
         });
-        assert.equal(counter, 21);
+        assert.equal(counter, 22);
 
         assert.isDefined(output.clean);
         assert.isDefined(output.coveralls);
