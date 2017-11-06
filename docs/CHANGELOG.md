@@ -1,6 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2017-11-06  | v1.0.97 | Maintenance |
+| 2017-11-06  | v1.0.98 | Update mocha options |
 | 2017-07-19  | v1.0.96 | Disable jslint by default |
 | 2017-05-01  | v1.0.89 | Load env vars from file for build process |
 | 2017-04-28  | v1.0.83 | Add support for simple dual web/node projects |
