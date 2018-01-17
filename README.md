@@ -41,6 +41,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2018-01-17  | v1.0.99 | Remove lock files automatically |
 | 2017-11-06  | v1.0.98 | Update mocha options |
 | 2017-07-19  | v1.0.96 | Disable jslint by default |
 | 2017-05-01  | v1.0.89 | Load env vars from file for build process |
