@@ -1,5 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2018-04-14  | v1.1.0  | Add support of node >=6 grunt tasks |
 | 2018-01-17  | v1.0.99 | Remove lock files automatically |
 | 2017-11-06  | v1.0.98 | Update mocha options |
 | 2017-07-19  | v1.0.96 | Disable jslint by default |
