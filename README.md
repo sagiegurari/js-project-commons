@@ -41,6 +41,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2018-04-30  | v1.1.2  | node 10 support |
 | 2018-04-23  | v1.1.1  | Update htmllint options |
 | 2018-04-14  | v1.1.0  | Add support of node >=6 grunt tasks |
 | 2018-01-17  | v1.0.99 | Remove lock files automatically |
