@@ -1,6 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2018-06-14  | v1.1.10 | Common karma config |
+| 2018-06-14  | v1.1.11 | Common karma config |
 | 2018-06-13  | v1.1.6  | Karma browser to be defined in karma conf and not in grunt task |
 | 2018-04-30  | v1.1.3  | node 10 support |
 | 2018-04-23  | v1.1.1  | Update htmllint options |

@@ -36,7 +36,8 @@ describe('KarmaConf Tests', function () {
         setEnv('TRAVIS', env);
         var output = config.value;
 
-        assert.strictEqual(output.browsers.length, 0);
+        assert.strictEqual(output.browsers.length, 1);
+        assert.strictEqual(output.browsers[0], 'ChromiumHeadless');
     });
 
     it('no project config, travis', function () {
@@ -63,7 +64,8 @@ describe('KarmaConf Tests', function () {
         setEnv('TRAVIS', env);
         var output = config.value;
 
-        assert.strictEqual(output.browsers.length, 0);
+        assert.strictEqual(output.browsers.length, 1);
+        assert.strictEqual(output.browsers[0], 'ChromiumHeadless');
         assert.strictEqual(output.test, 'fake value');
     });
 
