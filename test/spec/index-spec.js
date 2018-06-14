@@ -116,6 +116,12 @@ describe('Commons Tests', function () {
         });
     });
 
+    describe('test', function () {
+        it('karma', function () {
+            assert.isFunction(commons.test.karma);
+        });
+    });
+
     describe('grunt', function () {
         describe('config', function () {
             it('initConfig', function () {
