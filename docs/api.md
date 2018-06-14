@@ -8,21 +8,14 @@ The commons library.
 **Author**: Sagie Gur-Ari  
 
 * [Commons](#Commons) : <code>object</code>
-    * [.test](#Commons.test) : <code>Object</code>
-        * [.karma](#Commons.test.karma) : <code>Object</code>
+    * [.tools](#Commons.tools) : <code>Object</code>
     * [.grunt](#Commons.grunt) : <code>Object</code>
         * [.task](#Commons.grunt.task) : <code>Object</code>
 
-<a name="Commons.test"></a>
+<a name="Commons.tools"></a>
 
-### Commons.test : <code>Object</code>
-Holds various test configs.
-
-**Access**: public  
-<a name="Commons.test.karma"></a>
-
-#### .test.karma : <code>Object</code>
-Holds the karma base config.
+### Commons.tools : <code>Object</code>
+Holds various tools and configs.
 
 **Access**: public  
 <a name="Commons.grunt"></a>

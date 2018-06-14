@@ -116,9 +116,9 @@ describe('Commons Tests', function () {
         });
     });
 
-    describe('test', function () {
+    describe('tools', function () {
         it('karma', function () {
-            assert.isFunction(commons.test.karma);
+            assert.isFunction(commons.tools.karma);
         });
     });
 

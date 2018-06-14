@@ -4,7 +4,7 @@
 
 var chai = require('chai');
 var assert = chai.assert;
-var karmaConf = require('../../../../lib/test/karma/karma-conf-common');
+var karmaConf = require('../../../../lib/tools/karma/karma-conf-common');
 
 describe('KarmaConf Tests', function () {
     var createMockConfig = function () {
