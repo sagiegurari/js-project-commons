@@ -162,6 +162,7 @@
       "error",
       "never"
     ],
+    "require-unicode-regexp": "off",
     "semi-spacing": [
       "error",
       {
