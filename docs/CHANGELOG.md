@@ -1,7 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
-| 2019-05-08  | v1.2.0  | Maintenance |
-| 2018-11-24  | v1.1.13 | Update eslint rules |
+| 2019-10-07  | v1.2.1  | Update eslint rules |
 | 2018-06-14  | v1.1.11 | Common karma config |
 | 2018-06-13  | v1.1.6  | Karma browser to be defined in karma conf and not in grunt task |
 | 2018-04-30  | v1.1.3  | node 10 support |

@@ -1,7 +1,5 @@
 'use strict';
 
-/*global describe: false, it: false */
-
 var path = require('path');
 var chai = require('chai');
 var assert = chai.assert;

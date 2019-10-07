@@ -52,6 +52,7 @@
     "default-case": "off",
     "func-names": "off",
     "func-style": "off",
+    "function-call-argument-newline": "off",
     "global-require": "off",
     "id-blacklist": "off",
     "id-length": [
