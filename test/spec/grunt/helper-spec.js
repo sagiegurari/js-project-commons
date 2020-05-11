@@ -1,14 +1,14 @@
 'use strict';
 
-var chai = require('chai');
-var assert = chai.assert;
-var path = require('path');
-var helper = require('../../../lib/grunt/helper');
+const chai = require('chai');
+const assert = chai.assert;
+const path = require('path');
+const helper = require('../../../lib/grunt/helper');
 
 describe('Helper Tests', function () {
     describe('getRepoName', function () {
         it('valid', function () {
-            var output = helper.getRepoName({
+            const output = helper.getRepoName({
                 projectRoot: path.join(__dirname, '../../../')
             });
 
@@ -18,7 +18,7 @@ describe('Helper Tests', function () {
 
     describe('getRepoUserName', function () {
         it('valid', function () {
-            var output = helper.getRepoUserName({
+            const output = helper.getRepoUserName({
                 projectRoot: path.join(__dirname, '../../../')
             });
 
@@ -28,7 +28,7 @@ describe('Helper Tests', function () {
 
     describe('isESlintSupported', function () {
         it('es6 supported', function () {
-            var supported = helper.isESlintSupported({
+            const supported = helper.isESlintSupported({
                 es6Support: true
             });
 
@@ -36,7 +36,7 @@ describe('Helper Tests', function () {
         });
 
         it('es6 not supported', function () {
-            var supported = helper.isESlintSupported({
+            const supported = helper.isESlintSupported({
                 es6Support: false
             });
 
@@ -46,7 +46,7 @@ describe('Helper Tests', function () {
 
     describe('getESlintTestConfigFile', function () {
         it('node', function () {
-            var file = helper.getESlintTestConfigFile({
+            const file = helper.getESlintTestConfigFile({
                 nodeProject: true
             });
 
@@ -55,7 +55,7 @@ describe('Helper Tests', function () {
         });
 
         it('web', function () {
-            var file = helper.getESlintTestConfigFile({
+            const file = helper.getESlintTestConfigFile({
                 nodeProject: false
             });
 
@@ -66,7 +66,7 @@ describe('Helper Tests', function () {
 
     describe('getJSHintTestConfigFile', function () {
         it('node', function () {
-            var file = helper.getJSHintTestConfigFile({
+            const file = helper.getJSHintTestConfigFile({
                 nodeProject: true
             });
 
@@ -75,7 +75,7 @@ describe('Helper Tests', function () {
         });
 
         it('web', function () {
-            var file = helper.getJSHintTestConfigFile({
+            const file = helper.getJSHintTestConfigFile({
                 nodeProject: false
             });
 
@@ -86,7 +86,7 @@ describe('Helper Tests', function () {
 
     describe('getJSCSTestConfigFile', function () {
         it('test', function () {
-            var file = helper.getJSCSTestConfigFile();
+            const file = helper.getJSCSTestConfigFile();
 
             assert.isTrue(file.indexOf('test') !== -1);
         });
@@ -94,7 +94,7 @@ describe('Helper Tests', function () {
 
     describe('getJSLintTestConfig', function () {
         it('node, null', function () {
-            var config = helper.getJSLintTestConfig({
+            const config = helper.getJSLintTestConfig({
                 nodeProject: true
             }, null);
 
@@ -103,7 +103,7 @@ describe('Helper Tests', function () {
         });
 
         it('node, undefined', function () {
-            var config = helper.getJSLintTestConfig({
+            const config = helper.getJSLintTestConfig({
                 nodeProject: true
             });
 
@@ -112,7 +112,7 @@ describe('Helper Tests', function () {
         });
 
         it('node, empty', function () {
-            var config = helper.getJSLintTestConfig({
+            const config = helper.getJSLintTestConfig({
                 nodeProject: true
             }, {});
 
@@ -121,10 +121,10 @@ describe('Helper Tests', function () {
         });
 
         it('node, extend', function () {
-            var base = {
+            const base = {
                 test: true
             };
-            var config = helper.getJSLintTestConfig({
+            const config = helper.getJSLintTestConfig({
                 nodeProject: true
             }, base);
 
@@ -136,7 +136,7 @@ describe('Helper Tests', function () {
         });
 
         it('web, null', function () {
-            var config = helper.getJSLintTestConfig({
+            const config = helper.getJSLintTestConfig({
                 nodeProject: false
             }, null);
 
@@ -145,7 +145,7 @@ describe('Helper Tests', function () {
         });
 
         it('web, undefined', function () {
-            var config = helper.getJSLintTestConfig({
+            const config = helper.getJSLintTestConfig({
                 nodeProject: false
             });
 
@@ -154,7 +154,7 @@ describe('Helper Tests', function () {
         });
 
         it('web, empty', function () {
-            var config = helper.getJSLintTestConfig({
+            const config = helper.getJSLintTestConfig({
                 nodeProject: false
             }, {});
 
@@ -163,10 +163,10 @@ describe('Helper Tests', function () {
         });
 
         it('web, extend', function () {
-            var base = {
+            const base = {
                 test: true
             };
-            var config = helper.getJSLintTestConfig({
+            const config = helper.getJSLintTestConfig({
                 nodeProject: false
             }, base);
 
@@ -180,7 +180,7 @@ describe('Helper Tests', function () {
 
     describe('getProjectSources', function () {
         it('node all', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: true
             }, {
                 includeLib: true,
@@ -197,7 +197,7 @@ describe('Helper Tests', function () {
         });
 
         it('node defaults', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: true
             });
 
@@ -208,7 +208,7 @@ describe('Helper Tests', function () {
         });
 
         it('node only lib', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: true
             }, {
                 includeLib: true
@@ -221,7 +221,7 @@ describe('Helper Tests', function () {
         });
 
         it('node only build', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: true
             }, {
                 includeLib: false,
@@ -234,7 +234,7 @@ describe('Helper Tests', function () {
         });
 
         it('node only test', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: true
             }, {
                 includeLib: false,
@@ -247,7 +247,7 @@ describe('Helper Tests', function () {
         });
 
         it('web all, no bower.json', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false
             }, {
                 includeLib: true,
@@ -262,7 +262,7 @@ describe('Helper Tests', function () {
         });
 
         it('web defaults, no bower.json', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false
             });
 
@@ -270,7 +270,7 @@ describe('Helper Tests', function () {
         });
 
         it('web only lib, no bower.json', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false
             }, {
                 includeLib: true
@@ -280,7 +280,7 @@ describe('Helper Tests', function () {
         });
 
         it('web only build, no bower.json', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false
             }, {
                 includeLib: false,
@@ -293,7 +293,7 @@ describe('Helper Tests', function () {
         });
 
         it('web only test, no bower.json', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false
             }, {
                 includeLib: false,
@@ -306,7 +306,7 @@ describe('Helper Tests', function () {
         });
 
         it('web all', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false,
                 bowerJSON: {
                     main: 'test.js'
@@ -325,7 +325,7 @@ describe('Helper Tests', function () {
         });
 
         it('web defaults', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false,
                 bowerJSON: {
                     main: 'test.js'
@@ -338,7 +338,7 @@ describe('Helper Tests', function () {
         });
 
         it('web only lib', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false,
                 bowerJSON: {
                     main: 'test.js'
@@ -353,7 +353,7 @@ describe('Helper Tests', function () {
         });
 
         it('web only build', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false,
                 bowerJSON: {
                     main: 'test.js'
@@ -369,7 +369,7 @@ describe('Helper Tests', function () {
         });
 
         it('web only test', function () {
-            var src = helper.getProjectSources({
+            const src = helper.getProjectSources({
                 nodeProject: false,
                 bowerJSON: {
                     main: 'test.js'
@@ -387,7 +387,7 @@ describe('Helper Tests', function () {
 
     describe('getAPISources', function () {
         it('node', function () {
-            var src = helper.getAPISources({
+            const src = helper.getAPISources({
                 nodeProject: true
             }, false);
 
@@ -395,7 +395,7 @@ describe('Helper Tests', function () {
         });
 
         it('web, no bower.json', function () {
-            var src = helper.getAPISources({
+            const src = helper.getAPISources({
                 nodeProject: false
             }, false);
 
@@ -403,7 +403,7 @@ describe('Helper Tests', function () {
         });
 
         it('web', function () {
-            var src = helper.getAPISources({
+            const src = helper.getAPISources({
                 nodeProject: false,
                 bowerJSON: {
                     main: 'test.js'
@@ -416,7 +416,7 @@ describe('Helper Tests', function () {
 
     describe('getHTMLSources', function () {
         it('simple', function () {
-            var paths = helper.getHTMLSources();
+            const paths = helper.getHTMLSources();
 
             assert.deepEqual(paths, [
                 '<%=buildConfig.libDirectory%>/**/*.html',
@@ -427,7 +427,7 @@ describe('Helper Tests', function () {
 
     describe('getCSSSources', function () {
         it('simple', function () {
-            var paths = helper.getCSSSources();
+            const paths = helper.getCSSSources();
 
             assert.deepEqual(paths, [
                 '<%=buildConfig.libDirectory%>/**/*.css',
@@ -438,7 +438,7 @@ describe('Helper Tests', function () {
 
     describe('getMDFiles', function () {
         it('simple', function () {
-            var paths = helper.getMDFiles();
+            const paths = helper.getMDFiles();
 
             assert.deepEqual(paths, [
                 '*.md',

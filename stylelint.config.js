@@ -1,5 +1,5 @@
 'use strict';
 
-var commons = require('./index');
+const commons = require('./index');
 
 module.exports = commons.lint.stylelint;

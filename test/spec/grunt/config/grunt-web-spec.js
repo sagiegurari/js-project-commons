@@ -1,13 +1,13 @@
 'use strict';
 
-var chai = require('chai');
-var assert = chai.assert;
-var config = require('../../../../lib/grunt/config/grunt-web');
+const chai = require('chai');
+const assert = chai.assert;
+const config = require('../../../../lib/grunt/config/grunt-web');
 
 describe('Grunt Web Tests', function () {
     it('no project config and es6 support', function () {
-        var counter = 0;
-        var gruntMock = {
+        let counter = 0;
+        const gruntMock = {
             registerTask: function () {
                 counter++;
             },
@@ -24,7 +24,7 @@ describe('Grunt Web Tests', function () {
             }
         };
 
-        var output = config(gruntMock, {
+        const output = config(gruntMock, {
             buildConfig: {
                 test: true,
                 value: 1000,
@@ -61,8 +61,8 @@ describe('Grunt Web Tests', function () {
     });
 
     it('with project config and es6 support', function () {
-        var counter = 0;
-        var gruntMock = {
+        let counter = 0;
+        const gruntMock = {
             registerTask: function () {
                 counter++;
             },
@@ -79,7 +79,7 @@ describe('Grunt Web Tests', function () {
             }
         };
 
-        var output = config(gruntMock, {
+        const output = config(gruntMock, {
             buildConfig: {
                 test: true,
                 value: 1000,
@@ -121,8 +121,8 @@ describe('Grunt Web Tests', function () {
     });
 
     it('no project config and no es6 support', function () {
-        var counter = 0;
-        var gruntMock = {
+        let counter = 0;
+        const gruntMock = {
             registerTask: function () {
                 counter++;
             },
@@ -139,7 +139,7 @@ describe('Grunt Web Tests', function () {
             }
         };
 
-        var output = config(gruntMock, {
+        const output = config(gruntMock, {
             buildConfig: {
                 test: true,
                 value: 1000,
@@ -176,8 +176,8 @@ describe('Grunt Web Tests', function () {
     });
 
     it('with project config and no es6 support', function () {
-        var counter = 0;
-        var gruntMock = {
+        let counter = 0;
+        const gruntMock = {
             registerTask: function () {
                 counter++;
             },
@@ -194,7 +194,7 @@ describe('Grunt Web Tests', function () {
             }
         };
 
-        var output = config(gruntMock, {
+        const output = config(gruntMock, {
             buildConfig: {
                 test: true,
                 value: 1000,
