@@ -1,6 +1,6 @@
 {
   "parserOptions": {
-    "ecmaVersion": 5
+    "ecmaVersion": 6
   },
   "extends": "eslint:all",
   "rules": {
@@ -125,7 +125,6 @@
         "ignoreExport": false
       }
     ],
-    "no-var": "off",
     "object-curly-newline": [
       "error",
       {
@@ -144,7 +143,6 @@
     ],
     "padded-blocks": "off",
     "prefer-arrow-callback": "off",
-    "prefer-const": "off",
     "prefer-destructuring": "off",
     "prefer-named-capture-group": "off",
     "prefer-numeric-literals": "off",

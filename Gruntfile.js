@@ -5,7 +5,7 @@
 /*eslint-disable no-underscore-dangle*/
 
 module.exports = function (grunt) {
-    var commons = require('./');
+    const commons = require('./');
 
     commons.grunt.config.initConfig(grunt, {
         buildConfig: {

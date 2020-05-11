@@ -1,8 +1,8 @@
 'use strict';
 
-var path = require('path');
-var chai = require('chai');
-var assert = chai.assert;
+const path = require('path');
+const chai = require('chai');
+const assert = chai.assert;
 
 describe('Commons Tests', function () {
     global.build = {
@@ -17,7 +17,7 @@ describe('Commons Tests', function () {
         }
     };
 
-    var commons = require('../../');
+    const commons = require('../../');
 
     describe('lint', function () {
         describe('markdownlint', function () {
@@ -57,7 +57,7 @@ describe('Commons Tests', function () {
 
         describe('eslint', function () {
             it('node', function () {
-                var config = commons.lint.eslint.node;
+                const config = commons.lint.eslint.node;
 
                 assert.isDefined(config);
                 assert.isTrue(Object.keys(config.rules).length > 0);
@@ -71,7 +71,7 @@ describe('Commons Tests', function () {
             });
 
             it('browser', function () {
-                var config = commons.lint.eslint.web;
+                const config = commons.lint.eslint.web;
 
                 assert.isDefined(config);
                 assert.isTrue(Object.keys(config.rules).length > 0);
@@ -85,7 +85,7 @@ describe('Commons Tests', function () {
             });
 
             it('mocha', function () {
-                var config = commons.lint.eslint.mocha;
+                const config = commons.lint.eslint.mocha;
 
                 assert.isDefined(config);
                 assert.isTrue(Object.keys(config.rules).length > 0);
@@ -99,7 +99,7 @@ describe('Commons Tests', function () {
             });
 
             it('karma', function () {
-                var config = commons.lint.eslint.karma;
+                const config = commons.lint.eslint.karma;
 
                 assert.isDefined(config);
                 assert.isTrue(Object.keys(config.rules).length > 0);
@@ -137,20 +137,20 @@ describe('Commons Tests', function () {
 
         describe('task', function () {
             it('integrationTest', function () {
-                var counter = 0;
-                var gruntMock = {
+                let counter = 0;
+                const gruntMock = {
                     registerTask: function () {
                         counter++;
                     }
                 };
 
-                var output = commons.grunt.task.integrationTest(gruntMock);
+                const output = commons.grunt.task.integrationTest(gruntMock);
                 assert.isDefined(output);
                 assert.equal(counter, 2);
             });
 
             it('jslint', function () {
-                var gruntMock = {
+                const gruntMock = {
                     file: {
                         readJSON: function () {
                             return 'test';
@@ -158,25 +158,25 @@ describe('Commons Tests', function () {
                     }
                 };
 
-                var output = commons.grunt.task.jslint(gruntMock);
+                const output = commons.grunt.task.jslint(gruntMock);
                 assert.isDefined(output);
             });
 
             it('lint', function () {
-                var counter = 0;
-                var gruntMock = {
+                let counter = 0;
+                const gruntMock = {
                     registerTask: function () {
                         counter++;
                     }
                 };
 
-                var output = commons.grunt.task.lint(gruntMock);
+                const output = commons.grunt.task.lint(gruntMock);
                 assert.isDefined(output);
                 assert.equal(counter, 1);
             });
 
             it('markdownlint', function () {
-                var gruntMock = {
+                const gruntMock = {
                     file: {
                         readJSON: function () {
                             return 'test';
@@ -184,19 +184,19 @@ describe('Commons Tests', function () {
                     }
                 };
 
-                var output = commons.grunt.task.markdownlint(gruntMock);
+                const output = commons.grunt.task.markdownlint(gruntMock);
                 assert.isDefined(output);
             });
 
             it('topLevel', function () {
-                var counter = 0;
-                var gruntMock = {
+                let counter = 0;
+                const gruntMock = {
                     registerTask: function () {
                         counter++;
                     }
                 };
 
-                var output = commons.grunt.task.topLevel(gruntMock);
+                const output = commons.grunt.task.topLevel(gruntMock);
                 assert.isDefined(output);
                 assert.equal(counter, 11);
             });

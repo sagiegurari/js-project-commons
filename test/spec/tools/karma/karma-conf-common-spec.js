@@ -1,11 +1,11 @@
 'use strict';
 
-var chai = require('chai');
-var assert = chai.assert;
-var karmaConf = require('../../../../lib/tools/karma/karma-conf-common');
+const chai = require('chai');
+const assert = chai.assert;
+const karmaConf = require('../../../../lib/tools/karma/karma-conf-common');
 
 describe('KarmaConf Tests', function () {
-    var createMockConfig = function () {
+    const createMockConfig = function () {
         return {
             set: function (value) {
                 this.value = value;
@@ -13,8 +13,8 @@ describe('KarmaConf Tests', function () {
         };
     };
 
-    var setEnv = function (name, value) {
-        var output = process.env[name];
+    const setEnv = function (name, value) {
+        const output = process.env[name];
 
         if (value) {
             process.env[name] = value;
@@ -25,61 +25,61 @@ describe('KarmaConf Tests', function () {
         return output;
     };
 
-    it('no project config, not travis', function () {
-        var config = createMockConfig();
-        var env = setEnv('TRAVIS');
+    it('no project config, not CI', function () {
+        const config = createMockConfig();
+        const env = setEnv('CI');
 
         karmaConf(config, null, 'test');
 
-        setEnv('TRAVIS', env);
-        var output = config.value;
+        setEnv('CI', env);
+        const output = config.value;
 
         assert.strictEqual(output.browsers.length, 1);
         assert.strictEqual(output.browsers[0], 'ChromiumHeadless');
     });
 
-    it('no project config, travis', function () {
-        var config = createMockConfig();
-        var env = setEnv('TRAVIS', 'true');
+    it('no project config, CI', function () {
+        const config = createMockConfig();
+        const env = setEnv('CI', 'true');
 
         karmaConf(config, null, 'test');
 
-        setEnv('TRAVIS', env);
-        var output = config.value;
+        setEnv('CI', env);
+        const output = config.value;
 
         assert.strictEqual(output.browsers.length, 1);
-        assert.strictEqual(output.browsers[0], 'ChromeHeadlessTravis');
+        assert.strictEqual(output.browsers[0], 'ChromeHeadlessCI');
     });
 
-    it('project config, not travis', function () {
-        var config = createMockConfig();
-        var env = setEnv('TRAVIS');
+    it('project config, not CI', function () {
+        const config = createMockConfig();
+        const env = setEnv('CI');
 
         karmaConf(config, {
             test: 'fake value'
         }, 'test');
 
-        setEnv('TRAVIS', env);
-        var output = config.value;
+        setEnv('CI', env);
+        const output = config.value;
 
         assert.strictEqual(output.browsers.length, 1);
         assert.strictEqual(output.browsers[0], 'ChromiumHeadless');
         assert.strictEqual(output.test, 'fake value');
     });
 
-    it('project config, travis', function () {
-        var config = createMockConfig();
-        var env = setEnv('TRAVIS', 'true');
+    it('project config, CI', function () {
+        const config = createMockConfig();
+        const env = setEnv('CI', 'true');
 
         karmaConf(config, {
             test: 'fake value'
         }, 'test');
 
-        setEnv('TRAVIS', env);
-        var output = config.value;
+        setEnv('CI', env);
+        const output = config.value;
 
         assert.strictEqual(output.browsers.length, 1);
-        assert.strictEqual(output.browsers[0], 'ChromeHeadlessTravis');
+        assert.strictEqual(output.browsers[0], 'ChromeHeadlessCI');
         assert.strictEqual(output.test, 'fake value');
     });
 });

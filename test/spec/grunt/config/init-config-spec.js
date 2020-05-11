@@ -1,13 +1,13 @@
 'use strict';
 
-var path = require('path');
-var chai = require('chai');
-var assert = chai.assert;
-var initConfig = require('../../../../lib/grunt/config/init-config');
+const path = require('path');
+const chai = require('chai');
+const assert = chai.assert;
+const initConfig = require('../../../../lib/grunt/config/init-config');
 
 describe('Grunt initConfig Tests', function () {
     it('no project root', function () {
-        var errorFound = false;
+        let errorFound = false;
         try {
             initConfig({}, {
                 buildConfig: {
@@ -23,7 +23,7 @@ describe('Grunt initConfig Tests', function () {
     });
 
     it('no node/web project defined', function () {
-        var errorFound = false;
+        let errorFound = false;
         try {
             initConfig({}, {
                 buildConfig: {
@@ -39,8 +39,8 @@ describe('Grunt initConfig Tests', function () {
     });
 
     it('node, no project config', function () {
-        var validated = false;
-        var gruntMock = {
+        let validated = false;
+        const gruntMock = {
             registerTask: function () {
                 return undefined;
             },
@@ -90,8 +90,8 @@ describe('Grunt initConfig Tests', function () {
     });
 
     it('node, with project config', function () {
-        var validated = false;
-        var gruntMock = {
+        let validated = false;
+        const gruntMock = {
             registerTask: function () {
                 return undefined;
             },
@@ -141,8 +141,8 @@ describe('Grunt initConfig Tests', function () {
     });
 
     it('web, no project config', function () {
-        var validated = false;
-        var gruntMock = {
+        let validated = false;
+        const gruntMock = {
             registerTask: function () {
                 return undefined;
             },
@@ -192,8 +192,8 @@ describe('Grunt initConfig Tests', function () {
     });
 
     it('web, with project config', function () {
-        var validated = false;
-        var gruntMock = {
+        let validated = false;
+        const gruntMock = {
             registerTask: function () {
                 return undefined;
             },
@@ -243,8 +243,8 @@ describe('Grunt initConfig Tests', function () {
     });
 
     it('web, with bower.json', function () {
-        var validated = false;
-        var gruntMock = {
+        let validated = false;
+        const gruntMock = {
             registerTask: function () {
                 return undefined;
             },
@@ -292,8 +292,8 @@ describe('Grunt initConfig Tests', function () {
     });
 
     it('dual, no project config', function () {
-        var validated = false;
-        var gruntMock = {
+        let validated = false;
+        const gruntMock = {
             registerTask: function () {
                 return undefined;
             },
@@ -345,8 +345,8 @@ describe('Grunt initConfig Tests', function () {
     });
 
     it('es6 option defined', function () {
-        var validated = false;
-        var gruntMock = {
+        let validated = false;
+        const gruntMock = {
             registerTask: function () {
                 return undefined;
             },
