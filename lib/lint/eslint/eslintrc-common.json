@@ -135,7 +135,6 @@
       "error",
       "always"
     ],
-    "object-shorthand": "off",
     "one-var": "off",
     "one-var-declaration-per-line": [
       "error",

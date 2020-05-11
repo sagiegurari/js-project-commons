@@ -139,7 +139,7 @@ describe('Commons Tests', function () {
             it('integrationTest', function () {
                 let counter = 0;
                 const gruntMock = {
-                    registerTask: function () {
+                    registerTask() {
                         counter++;
                     }
                 };
@@ -152,7 +152,7 @@ describe('Commons Tests', function () {
             it('jslint', function () {
                 const gruntMock = {
                     file: {
-                        readJSON: function () {
+                        readJSON() {
                             return 'test';
                         }
                     }
@@ -165,7 +165,7 @@ describe('Commons Tests', function () {
             it('lint', function () {
                 let counter = 0;
                 const gruntMock = {
-                    registerTask: function () {
+                    registerTask() {
                         counter++;
                     }
                 };
@@ -178,7 +178,7 @@ describe('Commons Tests', function () {
             it('markdownlint', function () {
                 const gruntMock = {
                     file: {
-                        readJSON: function () {
+                        readJSON() {
                             return 'test';
                         }
                     }
@@ -191,7 +191,7 @@ describe('Commons Tests', function () {
             it('topLevel', function () {
                 let counter = 0;
                 const gruntMock = {
-                    registerTask: function () {
+                    registerTask() {
                         counter++;
                     }
                 };

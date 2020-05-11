@@ -41,21 +41,21 @@ describe('Grunt initConfig Tests', function () {
     it('node, no project config', function () {
         let validated = false;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 return undefined;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             },
-            initConfig: function (config) {
+            initConfig(config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.testConfig, {
                     test: true,
@@ -92,21 +92,21 @@ describe('Grunt initConfig Tests', function () {
     it('node, with project config', function () {
         let validated = false;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 return undefined;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             },
-            initConfig: function (config) {
+            initConfig(config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.testConfig, {
                     test: true,
@@ -143,21 +143,21 @@ describe('Grunt initConfig Tests', function () {
     it('web, no project config', function () {
         let validated = false;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 return undefined;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             },
-            initConfig: function (config) {
+            initConfig(config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.testConfig, {
                     test: true,
@@ -194,21 +194,21 @@ describe('Grunt initConfig Tests', function () {
     it('web, with project config', function () {
         let validated = false;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 return undefined;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            initConfig: function (config) {
+            initConfig(config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.testConfig, {
                     test: true,
@@ -245,21 +245,21 @@ describe('Grunt initConfig Tests', function () {
     it('web, with bower.json', function () {
         let validated = false;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 return undefined;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            initConfig: function (config) {
+            initConfig(config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.buildConfig.packageJSON, {
                     repository: {
@@ -294,21 +294,21 @@ describe('Grunt initConfig Tests', function () {
     it('dual, no project config', function () {
         let validated = false;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 return undefined;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             },
-            initConfig: function (config) {
+            initConfig(config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.testConfig, {
                     test: true,
@@ -347,21 +347,21 @@ describe('Grunt initConfig Tests', function () {
     it('es6 option defined', function () {
         let validated = false;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 return undefined;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             },
-            initConfig: function (config) {
+            initConfig(config) {
                 assert.isDefined(config);
                 assert.deepEqual(config.testConfig, {
                     test: true,

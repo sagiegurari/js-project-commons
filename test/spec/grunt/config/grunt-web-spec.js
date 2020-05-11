@@ -8,18 +8,18 @@ describe('Grunt Web Tests', function () {
     it('no project config and es6 support', function () {
         let counter = 0;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 counter++;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             }
         };
@@ -63,18 +63,18 @@ describe('Grunt Web Tests', function () {
     it('with project config and es6 support', function () {
         let counter = 0;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 counter++;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             }
         };
@@ -123,18 +123,18 @@ describe('Grunt Web Tests', function () {
     it('no project config and no es6 support', function () {
         let counter = 0;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 counter++;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             }
         };
@@ -178,18 +178,18 @@ describe('Grunt Web Tests', function () {
     it('with project config and no es6 support', function () {
         let counter = 0;
         const gruntMock = {
-            registerTask: function () {
+            registerTask() {
                 counter++;
             },
-            registerMultiTask: function () {
+            registerMultiTask() {
                 return undefined;
             },
             file: {
-                readJSON: function () {
+                readJSON() {
                     return {};
                 }
             },
-            loadNpmTasks: function () {
+            loadNpmTasks() {
                 return undefined;
             }
         };

@@ -41,6 +41,7 @@ See [contributing guide](.github/CONTRIBUTING.md)
 
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2020-05-11  | v1.3.0  | Update CI and ES6 syntax |
 | 2019-10-07  | v1.2.1  | Update eslint rules |
 | 2018-06-14  | v1.1.11 | Common karma config |
 | 2018-06-13  | v1.1.6  | Karma browser to be defined in karma conf and not in grunt task |

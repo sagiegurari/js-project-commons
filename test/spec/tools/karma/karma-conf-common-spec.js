@@ -7,7 +7,7 @@ const karmaConf = require('../../../../lib/tools/karma/karma-conf-common');
 describe('KarmaConf Tests', function () {
     const createMockConfig = function () {
         return {
-            set: function (value) {
+            set(value) {
                 this.value = value;
             }
         };
