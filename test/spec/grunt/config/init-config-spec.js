@@ -242,7 +242,7 @@ describe('Grunt initConfig Tests', function () {
         assert.isTrue(validated);
     });
 
-    it('web, with bower.json', function () {
+    it('web, with main', function () {
         let validated = false;
         const gruntMock = {
             registerTask() {
@@ -266,11 +266,10 @@ describe('Grunt initConfig Tests', function () {
                         type: 'git',
                         url: 'http://github.com/sagiegurari/js-project-commons.git'
                     },
-                    test: true
-                });
-                assert.deepEqual(config.buildConfig.bowerJSON, {
+                    test: true,
                     main: 'main.js'
                 });
+                assert.strictEqual(config.buildConfig.packageJSON.main, 'main.js');
 
                 assert.isDefined(config.clean);
                 assert.isDefined(config.karma);

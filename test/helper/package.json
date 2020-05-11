@@ -3,5 +3,6 @@
     "type": "git",
     "url": "http://github.com/sagiegurari/js-project-commons.git"
   },
-  "test": true
+  "test": true,
+  "main": "main.js"
 }

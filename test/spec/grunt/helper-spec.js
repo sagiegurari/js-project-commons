@@ -246,7 +246,7 @@ describe('Helper Tests', function () {
             ]);
         });
 
-        it('web all, no bower.json', function () {
+        it('web all', function () {
             const src = helper.getProjectSources({
                 nodeProject: false
             }, {
@@ -261,7 +261,7 @@ describe('Helper Tests', function () {
             ]);
         });
 
-        it('web defaults, no bower.json', function () {
+        it('web defaults', function () {
             const src = helper.getProjectSources({
                 nodeProject: false
             });
@@ -269,7 +269,7 @@ describe('Helper Tests', function () {
             assert.deepEqual(src, []);
         });
 
-        it('web only lib, no bower.json', function () {
+        it('web only lib', function () {
             const src = helper.getProjectSources({
                 nodeProject: false
             }, {
@@ -279,7 +279,7 @@ describe('Helper Tests', function () {
             assert.deepEqual(src, []);
         });
 
-        it('web only build, no bower.json', function () {
+        it('web only build', function () {
             const src = helper.getProjectSources({
                 nodeProject: false
             }, {
@@ -292,7 +292,7 @@ describe('Helper Tests', function () {
             ]);
         });
 
-        it('web only test, no bower.json', function () {
+        it('web only test', function () {
             const src = helper.getProjectSources({
                 nodeProject: false
             }, {
@@ -305,10 +305,10 @@ describe('Helper Tests', function () {
             ]);
         });
 
-        it('web all', function () {
+        it('web all, with main', function () {
             const src = helper.getProjectSources({
                 nodeProject: false,
-                bowerJSON: {
+                packageJSON: {
                     main: 'test.js'
                 }
             }, {
@@ -324,10 +324,10 @@ describe('Helper Tests', function () {
             ]);
         });
 
-        it('web defaults', function () {
+        it('web defaults, with main', function () {
             const src = helper.getProjectSources({
                 nodeProject: false,
-                bowerJSON: {
+                packageJSON: {
                     main: 'test.js'
                 }
             });
@@ -337,10 +337,10 @@ describe('Helper Tests', function () {
             ]);
         });
 
-        it('web only lib', function () {
+        it('web only lib, with main', function () {
             const src = helper.getProjectSources({
                 nodeProject: false,
-                bowerJSON: {
+                packageJSON: {
                     main: 'test.js'
                 }
             }, {
@@ -352,10 +352,10 @@ describe('Helper Tests', function () {
             ]);
         });
 
-        it('web only build', function () {
+        it('web only build, with main', function () {
             const src = helper.getProjectSources({
                 nodeProject: false,
-                bowerJSON: {
+                packageJSON: {
                     main: 'test.js'
                 }
             }, {
@@ -368,10 +368,10 @@ describe('Helper Tests', function () {
             ]);
         });
 
-        it('web only test', function () {
+        it('web only test, with main', function () {
             const src = helper.getProjectSources({
                 nodeProject: false,
-                bowerJSON: {
+                packageJSON: {
                     main: 'test.js'
                 }
             }, {
@@ -394,7 +394,7 @@ describe('Helper Tests', function () {
             assert.equal(src, '<%=buildConfig.libDirectory%>/**/*.js');
         });
 
-        it('web, no bower.json', function () {
+        it('web', function () {
             const src = helper.getAPISources({
                 nodeProject: false
             }, false);
@@ -402,10 +402,10 @@ describe('Helper Tests', function () {
             assert.isUndefined(src);
         });
 
-        it('web', function () {
+        it('web, with main', function () {
             const src = helper.getAPISources({
                 nodeProject: false,
-                bowerJSON: {
+                packageJSON: {
                     main: 'test.js'
                 }
             }, false);
