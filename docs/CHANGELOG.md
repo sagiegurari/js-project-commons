@@ -1,5 +1,6 @@
 | Date        | Version | Description |
 | ----------- | ------- | ----------- |
+| 2021-02-08  | v1.3.2  | Upgrading dependencies |
 | 2020-05-11  | v1.3.1  | Support web projects without bower.json |
 | 2020-05-11  | v1.3.0  | Update CI and ES6 syntax |
 | 2019-10-07  | v1.2.1  | Update eslint rules |
